@@ -109,7 +109,7 @@ function getlengthcoefficient(x) {
   }
 } 
 function lengthconverter() {
-  lengthnumberinput = document.getElementById("lengthnumberinput")
+  lengthnumberinput = document.getElementById("lengthnumberinput").value
   lengthunitinput = getlengthcoefficient(document.getElementById("lengthunitinput").value)
   lengthunitoutput = getlengthcoefficient(document.getElementById("lengthunitoutput").value)
   lengthnumberoutput = lengthnumberinput*lengthunitinput/lengthunitoutput
