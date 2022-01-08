@@ -2,10 +2,11 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="interface.css" />
-    <title>Ultimate Measurement Converter</title>
+    <title>Ultimate Unit Converter</title>
   </head>
   <body>
-    <div class="lengthconverter">
+    <table><tr>
+      <td><div class="lengthconverter">
       <h1>Length</h1>
       Input: <input type="number" id="lengthnumberinput"><input list="lengthunits" id="lengthunitinput">
       Output: <span id="lengthnumberoutput"></span><input list="lengthunits" id="lengthunitoutput">
@@ -58,7 +59,8 @@
         <option value="zeptometers">
         <option value="zettameters">
       </datalist>
-    </div>
+    </div></td>
+    </tr></table>
     <script type="text/javascript" src="main.js"></script>  
   </body>
 </html>
