@@ -58,7 +58,7 @@ function getlengthcoefficient(x) {
     return 5556
   } else if (x=="li") {
     return 500
-  } else if (x=="light years")
+  } else if (x=="light years") {
     return 9460528412464108
   } else if (x=="links") {
     return 0.201168
