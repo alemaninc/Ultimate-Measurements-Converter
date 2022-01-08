@@ -6,9 +6,9 @@ function format(x) {
   }
 }
 var lengthnumberinput = 1
-var lengthunitinput = "angstroms"
+var lengthunitinput = document.getElementById("lengthunitinput")
 var lengthnumberoutput = 1
-var lengthunitoutput = "astronomical units"
+var lengthunitoutput = document.getElementById("lengthunitoutput")
 function getlengthcoefficient(x) {
   if (x=="angstroms") {
     return 1e-10
@@ -113,7 +113,7 @@ function lengthconverter() {
   var lengthunitinput = getlengthcoefficient(document.getElementById("lengthunitinput"))
   var lengthunitoutput = getlengthcoefficient(document.getElementById("lengthunitoutput"))
   var lengthnumberoutput = lengthnumberinput*lengthunitinput/lengthunitoutput
-  document.getElementById("lengthunitoutput").innerHTML = lengthnumberoutput
+  document.getElementById("lengthnumberoutput").innerHTML = lengthnumberoutput
 }
 function loop() {
   lengthconverter()
