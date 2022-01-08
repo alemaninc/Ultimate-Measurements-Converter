@@ -113,7 +113,7 @@ function lengthconverter() {
   lengthunitinput = getlengthcoefficient(document.getElementById("lengthunitinput").value)
   lengthunitoutput = getlengthcoefficient(document.getElementById("lengthunitoutput").value)
   lengthnumberoutput = lengthnumberinput*lengthunitinput/lengthunitoutput
-  document.getElementById("lengthnumberoutput").innerHTML = lengthnumberoutput
+  document.getElementById("lengthnumberoutput").innerHTML = format(lengthnumberoutput)
 }
 function loop() {
   lengthconverter()
