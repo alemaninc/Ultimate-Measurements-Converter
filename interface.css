@@ -11,3 +11,102 @@ body {
   height: 33%;
   width: 25%;
 }
+.timeconverter {
+  background-color: #000000;
+  border: 5px outset #ff9900;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.speedconverter {
+  background-color: #000000;
+  border: 5px outset #ffff00;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.energyconverter {
+  background-color: #000000;
+  border: 5px outset #99ff00;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.massconverter {
+  background-color: #000000;
+  border: 5px outset #00ff00;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.electriccurrentconverter {
+  background-color: #000000;
+  border: 5px outset #00ff99;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.forceconverter {
+  background-color: #000000;
+  border: 5px outset #00ffff;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.areaconverter {
+  background-color: #000000;
+  border: 5px outset #0099ff;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.volumeconverter {
+  background-color: #000000;
+  border: 5px outset #0000ff;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.substanceconverter {
+  background-color: #000000;
+  border: 5px outset #9900ff;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.lightconverter {
+  background-color: #000000;
+  border: 5px outset #ff00ff;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
+.informationconverter {
+  background-color: #000000;
+  border: 5px outset #ff0099;
+  color: #ff0000;
+  text-align: center;
+  border-radius: 50px;
+  height: 33%;
+  width: 25%;
+}
