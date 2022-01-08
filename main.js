@@ -109,10 +109,10 @@ function getlengthcoefficient(x) {
   }
 } 
 function lengthconverter() {
-  var lengthnumberinput = document.getElementById("lengthnumberinput")
-  var lengthunitinput = getlengthcoefficient(document.getElementById("lengthunitinput"))
-  var lengthunitoutput = getlengthcoefficient(document.getElementById("lengthunitoutput"))
-  var lengthnumberoutput = lengthnumberinput*lengthunitinput/lengthunitoutput
+  lengthnumberinput = document.getElementById("lengthnumberinput")
+  lengthunitinput = getlengthcoefficient(document.getElementById("lengthunitinput").value)
+  lengthunitoutput = getlengthcoefficient(document.getElementById("lengthunitoutput").value)
+  lengthnumberoutput = lengthnumberinput*lengthunitinput/lengthunitoutput
   document.getElementById("lengthnumberoutput").innerHTML = lengthnumberoutput
 }
 function loop() {
