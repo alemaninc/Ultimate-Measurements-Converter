@@ -118,4 +118,4 @@ function lengthconverter() {
 function loop() {
   lengthconverter()
 }
-setInterval(loop(),100) // Makes the page update automatically
+setInterval(loop(),100); // Makes the page update automatically
