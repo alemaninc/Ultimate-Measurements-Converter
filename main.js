@@ -5,6 +5,11 @@ function format(x) {
     return x
   }
 }
+
+
+
+
+// Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
 var lengthnumberoutput = 1
@@ -105,9 +110,9 @@ function getlengthcoefficient(x) {
   } else if (x=="zettameters") {
     return 1e21
   } else {
-    return 1e-154
+    return 1
   }
-} 
+}
 function lengthconverter() {
   lengthnumberinput = document.getElementById("lengthnumberinput").value
   lengthunitinput = getlengthcoefficient(document.getElementById("lengthunitinput").value)
@@ -115,7 +120,105 @@ function lengthconverter() {
   lengthnumberoutput = lengthnumberinput*lengthunitinput/lengthunitoutput
   document.getElementById("lengthnumberoutput").innerHTML = format(lengthnumberoutput)
 }
+
+
+
+
+// Time starts here
+var timenumberinput = 1
+var timeunitinput = document.getElementById("lengthunitinput")
+var timenumberoutput = 1
+var timeunitoutput = document.getElementById("lengthunitoutput")
+function gettimecoefficient(x) {
+  if (x=="attoseconds") {
+    return 1e-18
+  } else if (x=="centuries") {
+    return 3155692599
+  } else if (x=="common years") {
+    return 31536000
+  } else if (x=="days") {
+    return 86400
+  } else if (x=="decades") {
+    return 315569260
+  } else if (x=="exaseconds") {
+    return 1e18
+  } else if (x=="femtoseconds") {
+    return 1e-15
+  } else if (x=="fortnights") {
+    return 1209600
+  } else if (x=="galactic years") {
+    return 7.10030835e15
+  } else if (x=="gigaannums") {
+    return 3.155692599e16
+  } else if (x=="gigaseconds") {
+    return 1e9
+  } else if (x=="Gregorian years") {
+    return 31556952
+  } else if (x=="hours") {
+    return 3600
+  } else if (x=="kiloseconds") {
+    return 1000
+  } else if (x=="leap years") {
+    return 31622400
+  } else if (x=="megaannums") {
+    return 3.155692599e13
+  } else if (x=="megaseconds") {
+    return 1000000
+  } else if (x=="microseconds") {
+    return 1e-6
+  } else if (x=="millennia") {
+    return 31556925990
+  } else if (x=="milliseconds") {
+    return 0.001
+  } else if (x=="minutes") {
+    return 60
+  } else if (x=="nanoseconds") {
+    return 1e-9
+  } else if (x=="petaseconds") {
+    return 1e15
+  } else if (x=="picoseconds") {
+    return 1e-12
+  } else if (x=="planck times") {
+    return 5.3912e-44
+  } else if (x=="seconds") {
+    return 1
+  } else if (x=="sidereal years") {
+    return 31558149.7635456
+  } else if (x=="Svedbergs") {
+    return 1e-13
+  } else if (x=="teraseconds") {
+    return 1e12
+  } else if (x=="thirds") {
+    return 0.016666666666667
+  } else if (x=="time units") {
+    return 0.001024
+  } else if (x=="tropical years") {
+    return 31556925.216
+  } else if (x=="universe ages") {
+    return 436117076640000000
+  } else if (x=="weeks") {
+    return 604800
+  } else if (x=="yoctoseconds") {
+    return 1e-24
+  } else if (x=="yottaseconds") {
+    return 1e24
+  } else if (x=="zeptoseconds") {
+    return 1e-21
+  } else if (x=="zettaseconds") {
+    return 1e21
+  } else {
+    return 1
+  }
+}
+function timeconverter() {
+  timenumberinput = document.getElementById("timenumberinput").value
+  timeunitinput = gettimecoefficient(document.getElementById("timeunitinput").value)
+  timeunitoutput = gettimecoefficient(document.getElementById("timeunitoutput").value)
+  timenumberoutput = timenumberinput*timeunitinput/timeunitoutput
+  document.getElementById("timenumberoutput").innerHTML = format(timenumberoutput)
+}
 function loop() {
   lengthconverter()
+  timeconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
