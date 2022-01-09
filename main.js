@@ -1,5 +1,7 @@
 function format(x) {
-  if ((x>1e9) || (x<1e-6)) {
+  if (x==0) {
+    return 0
+  } else if ((x>1e9) || (x<1e-6)) {
     return Math.floor(x/10**Math.floor(Math.log10(x)-4))/10000+"e"+Math.floor(Math.log10(x))
   } else {
     return x
