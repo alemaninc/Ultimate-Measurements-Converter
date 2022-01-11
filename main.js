@@ -1,5 +1,7 @@
 function format(x) {
-  if (x==0) {
+  if isNaN(x) {
+    return ""
+  } else if (x==0) {
     return 0
   } else if ((x>1e9) || (x<1e-6)) {
     return Math.floor(x/10**Math.floor(Math.log10(x)-4))/10000+"e"+Math.floor(Math.log10(x))
@@ -122,7 +124,7 @@ function getabsorbeddosecoefficient(x) {
   } else if (x=="zettarad") {
     return 1e19
   } else {
-    return 1
+    return NaN
   }
 }
 function absorbeddoseconverter() {
@@ -245,7 +247,7 @@ function getaccelerationcoefficient(x) {
   } else if (x=="miles per hour²") {
     return 0.44704
   } else {
-    return 1
+    return NaN
   }
 }
 function accelerationconverter() {
@@ -362,7 +364,7 @@ function getlengthcoefficient(x) {
   } else if (x=="zettameters") {
     return 1e21
   } else {
-    return 1
+    return NaN
   }
 }
 function lengthconverter() {
@@ -461,7 +463,7 @@ function gettimecoefficient(x) {
   } else if (x=="zettaseconds") {
     return 1e21
   } else {
-    return 1
+    return NaN
   }
 }
 function timeconverter() {
