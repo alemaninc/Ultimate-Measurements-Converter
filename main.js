@@ -21,7 +21,7 @@ function getabsorbeddosecoefficient(x) {
     return 1e-22
   } else if (x=="attogray") {
     return 1e-18
-  } else if (x=="attorad")
+  } else if (x=="attorad") {
     return 1e-20
   } else if (x=="erg per gram") {
     return 1e-4
@@ -130,7 +130,9 @@ function absorbeddoseconverter() {
   absorbeddoseunitinput = getabsorbeddosecoefficient(document.getElementById("absorbeddoseunitinput").value)
   absorbeddoseunitoutput = getabsorbeddosecoefficient(document.getElementById("absorbeddoseunitoutput").value)
   absorbeddosenumberoutput = absorbeddosenumberinput*absorbeddoseunitinput/absorbeddoseunitoutput
-  document.getElementById("absorbeddosenumberoutput").innerHTML = format(absorbeddosenumberoutput)
+  if ((absorbeddoseunitinput !== "") && (absorbeddoseunitoutput !== "")) {
+    document.getElementById("absorbeddosenumberoutput").innerHTML = format(absorbeddosenumberoutput)
+  }
 }
 
 
@@ -251,7 +253,9 @@ function accelerationconverter() {
   accelerationunitinput = getaccelerationcoefficient(document.getElementById("accelerationunitinput").value)
   accelerationunitoutput = getaccelerationcoefficient(document.getElementById("accelerationunitoutput").value)
   accelerationnumberoutput = accelerationnumberinput*accelerationunitinput/accelerationunitoutput
-  document.getElementById("accelerationnumberoutput").innerHTML = format(accelerationnumberoutput)
+  if ((accelerationunitinput !== "") && (accelerationunitoutput !== "")) {
+    document.getElementById("accelerationnumberoutput").innerHTML = format(accelerationnumberoutput)
+  }
 }
 
 
@@ -366,7 +370,9 @@ function lengthconverter() {
   lengthunitinput = getlengthcoefficient(document.getElementById("lengthunitinput").value)
   lengthunitoutput = getlengthcoefficient(document.getElementById("lengthunitoutput").value)
   lengthnumberoutput = lengthnumberinput*lengthunitinput/lengthunitoutput
-  document.getElementById("lengthnumberoutput").innerHTML = format(lengthnumberoutput)
+  if ((lengthunitinput !== "") && (lengthunitoutput !== "")) {
+    document.getElementById("lengthnumberoutput").innerHTML = format(lengthnumberoutput)
+  }
 }
 
 
@@ -463,8 +469,15 @@ function timeconverter() {
   timeunitinput = gettimecoefficient(document.getElementById("timeunitinput").value)
   timeunitoutput = gettimecoefficient(document.getElementById("timeunitoutput").value)
   timenumberoutput = timenumberinput*timeunitinput/timeunitoutput
-  document.getElementById("timenumberoutput").innerHTML = format(timenumberoutput)
+  if ((timeunitinput !== "") && (timeunitoutput !== "")) {
+    document.getElementById("timenumberoutput").innerHTML = format(timenumberoutput)
+  }
 }
+
+
+
+
+
 function loop() {
   absorbeddoseconverter()
   accelerationconverter()
