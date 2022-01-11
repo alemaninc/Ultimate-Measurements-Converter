@@ -11,6 +11,131 @@ function format(x) {
 
 
 
+// Absorbed dose starts here
+var absorbeddosenumberinput = 1
+var absorbeddoseunitinput = document.getElementById("absorbeddoseunitinput")
+var absorbeddosenumberoutput = 1
+var absorbeddoseunitoutput = document.getElementById("absorbeddoseunitoutput")
+function getabsorbeddosecoefficient(x) {
+  if (x=="attoerg per gram") {
+    return 1e-22
+  } else if (x=="attogray") {
+    return 1e-18
+  } else if (x=="attorad")
+    return 1e-20
+  } else if (x=="erg per gram") {
+    return 1e-4
+  } else if (x=="exaerg per gram") {
+    return 1e14
+  } else if (x=="exagray") {
+    return 1e18
+  } else if (x=="exarad") {
+    return 1e16
+  } else if (x=="femtoerg per gram") {
+    return 1e-19
+  } else if (x=="femtogray") {
+    return 1e-15
+  } else if (x=="femtorad") {
+    return 1e-17
+  } else if (x=="gigaerg per gram") {
+    return 1e5
+  } else if (x=="gigagray") {
+    return 1e9
+  } else if (x=="gigarad") {
+    return 1e7
+  } else if (x=="gray") {
+    return 1
+  } else if (x=="kiloerg per gram") {
+    return 0.1
+  } else if (x=="kilogray") {
+    return 1000
+  } else if (x=="kilorad") {
+    return 10
+  } else if (x=="megaerg per gram") {
+    return 100
+  } else if (x=="megagray") {
+    return 1e6
+  } else if (x=="megarad") {
+    return 10000
+  } else if (x=="microerg per gram") {
+    return 1e-10
+  } else if (x=="microgray") {
+    return 1e-6
+  } else if (x=="microrad") {
+    return 1e-8
+  } else if (x=="millierg per gram") {
+    return 1e-7
+  } else if (x=="milligray") {
+    return 1e-3
+  } else if (x=="millirad") {
+    return 1e-5
+  } else if (x=="nanoerg per gram") {
+    return 1e-13
+  } else if (x=="nanogray") {
+    return 1e-9
+  } else if (x=="nanorad") {
+    return 1e-11
+  } else if (x=="petaerg per gram") {
+    return 1e11
+  } else if (x=="petagray") {
+    return 1e15
+  } else if (x=="petarad") {
+    return 1e13
+  } else if (x=="picoerg per gram") {
+    return 1e-16
+  } else if (x=="picogray") {
+    return 1e-12
+  } else if (x=="picorad") {
+    return 1e-14
+  } else if (x=="rad") {
+    return 0.01
+  } else if (x=="teraerg per gram") {
+    return 1e8
+  } else if (x=="teragray") {
+    return 1e12
+  } else if (x=="terarad") {
+    return 1e10
+  } else if (x=="whole body LD50 for ARS in humans") {
+    return 4
+  } else if (x=="yoctoerg per gram") {
+    return 1e-28
+  } else if (x=="yoctogray") {
+    return 1e-24
+  } else if (x=="yoctorad") {
+    return 1e-26
+  } else if (x=="yottaerg per gram") {
+    return 1e20
+  } else if (x=="yottagray") {
+    return 1e24
+  } else if (x=="yottarad") {
+    return 1e22
+  } else if (x=="zeptoerg per gram") {
+    return 1e-25
+  } else if (x=="zeptogray") {
+    return 1e-21
+  } else if (x=="zeptorad") {
+    return 1e-23
+  } else if (x="zettaerg per gram") {
+    return 1e17
+  } else if (x=="zettagray") {
+    return 1e21
+  } else if (x=="zettarad") {
+    return 1e19
+  } else if {
+    return 1
+  }
+}
+function absorbeddoseconverter() {
+  absorbeddosenumberinput = document.getElementById("absorbeddosenumberinput").value
+  absorbeddoseunitinput = getabsorbeddosecoefficient(document.getElementById("absorbeddoseunitinput").value)
+  absorbeddoseunitoutput = getabsorbeddosecoefficient(document.getElementById("absorbeddoseunitoutput").value)
+  absorbeddosenumberoutput = absorbeddosenumberinput*absorbeddoseunitinput/absorbeddoseunitoutput
+  document.getElementById("absorbeddosenumberoutput").innerHTML = format(absorbeddosenumberoutput)
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
