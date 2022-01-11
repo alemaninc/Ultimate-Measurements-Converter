@@ -1,5 +1,5 @@
 function format(x) {
-  if isNaN(x) {
+  if (isNaN(x)) {
     return ""
   } else if (x==0) {
     return 0
