@@ -121,7 +121,7 @@ function getabsorbeddosecoefficient(x) {
     return 1e21
   } else if (x=="zettarad") {
     return 1e19
-  } else if {
+  } else {
     return 1
   }
 }
