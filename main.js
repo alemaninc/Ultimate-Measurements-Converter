@@ -130,7 +130,7 @@ function absorbeddoseconverter() {
   absorbeddoseunitinput = getabsorbeddosecoefficient(document.getElementById("absorbeddoseunitinput").value)
   absorbeddoseunitoutput = getabsorbeddosecoefficient(document.getElementById("absorbeddoseunitoutput").value)
   absorbeddosenumberoutput = absorbeddosenumberinput*absorbeddoseunitinput/absorbeddoseunitoutput
-  if ((absorbeddoseunitinput !== "") && (absorbeddoseunitoutput !== "")) {
+  if ((document.getElementById("absorbeddoseunitinput").value !== "") && (document.getElementById("absorbeddoseunitoutput").value !== "")) {
     document.getElementById("absorbeddosenumberoutput").innerHTML = format(absorbeddosenumberoutput)
   }
 }
@@ -253,7 +253,7 @@ function accelerationconverter() {
   accelerationunitinput = getaccelerationcoefficient(document.getElementById("accelerationunitinput").value)
   accelerationunitoutput = getaccelerationcoefficient(document.getElementById("accelerationunitoutput").value)
   accelerationnumberoutput = accelerationnumberinput*accelerationunitinput/accelerationunitoutput
-  if ((accelerationunitinput !== "") && (accelerationunitoutput !== "")) {
+  if ((document.getElementById("accelerationunitinput").value !== "") && (document.getElementById("accelerationunitoutput").value !== "")) {
     document.getElementById("accelerationnumberoutput").innerHTML = format(accelerationnumberoutput)
   }
 }
@@ -370,7 +370,7 @@ function lengthconverter() {
   lengthunitinput = getlengthcoefficient(document.getElementById("lengthunitinput").value)
   lengthunitoutput = getlengthcoefficient(document.getElementById("lengthunitoutput").value)
   lengthnumberoutput = lengthnumberinput*lengthunitinput/lengthunitoutput
-  if ((lengthunitinput !== "") && (lengthunitoutput !== "")) {
+  if ((document.getElementById("lengthunitinput").value !== "") && (document.getElementById("lengthunitoutput").value !== "")) {
     document.getElementById("lengthnumberoutput").innerHTML = format(lengthnumberoutput)
   }
 }
@@ -469,7 +469,7 @@ function timeconverter() {
   timeunitinput = gettimecoefficient(document.getElementById("timeunitinput").value)
   timeunitoutput = gettimecoefficient(document.getElementById("timeunitoutput").value)
   timenumberoutput = timenumberinput*timeunitinput/timeunitoutput
-  if ((timeunitinput !== "") && (timeunitoutput !== "")) {
+  if ((document.getElementById("timeunitinput").value !== "") && (document.getElementById("timeunitoutput").value !== "")) {
     document.getElementById("timenumberoutput").innerHTML = format(timenumberoutput)
   }
 }
