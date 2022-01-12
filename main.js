@@ -303,8 +303,8 @@ function getanglecoefficient(x) {
 }
 function angleconverter() {
   anglenumberinput = document.getElementById("anglenumberinput").value
-  angleunitinput = getaccelerationcoefficient(document.getElementById("angleunitinput").value)
-  angleunitoutput = getaccelerationcoefficient(document.getElementById("angleunitoutput").value)
+  angleunitinput = getanglecoefficient(document.getElementById("angleunitinput").value)
+  angleunitoutput = getanglecoefficient(document.getElementById("angleunitoutput").value)
   anglenumberoutput = anglenumberinput*angleunitinput/angleunitoutput
   if ((document.getElementById("angleunitinput").value !== "") && (document.getElementById("angleunitoutput").value !== "")) {
     document.getElementById("anglenumberoutput").innerHTML = format(anglenumberoutput)
