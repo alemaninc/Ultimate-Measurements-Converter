@@ -422,8 +422,8 @@ function getareacoefficient(x) {
 }
 function areaconverter() {
   areanumberinput = document.getElementById("areanumberinput").value
-  areaunitinput = getaccelerationcoefficient(document.getElementById("areaunitinput").value)
-  areaunitoutput = getaccelerationcoefficient(document.getElementById("areaunitoutput").value)
+  areaunitinput = getareacoefficient(document.getElementById("areaunitinput").value)
+  areaunitoutput = getareacoefficient(document.getElementById("areaunitoutput").value)
   areanumberoutput = areanumberinput*areaunitinput/areaunitoutput
   if ((document.getElementById("areaunitinput").value !== "") && (document.getElementById("areaunitoutput").value !== "")) {
     document.getElementById("areanumberoutput").innerHTML = format(areanumberoutput)
