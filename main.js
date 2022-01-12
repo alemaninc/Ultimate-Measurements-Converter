@@ -314,6 +314,125 @@ function angleconverter() {
 
 
 
+// Area starts here
+var areanumberinput = 1
+var areaunitinput = document.getElementById("areaunitinput")
+var areanumberoutput = 1
+var areaunitoutput = document.getElementById("areaunitoutput")
+function getareacoefficient(x) {
+  if (x=="acres") {
+    return 4046.8564224
+  } else if (x=="angstroms²") {
+    return 1e-20
+  } else if (x=="ares") {
+    return 100
+  } else if (x=="attometers²") {
+    return 1e-36
+  } else if (x=="barns") {
+    return 1e-28
+  } else if (x=="bigha") {
+    return 2529.285264
+  } else if (x=="cana²") {
+    return 4
+  } else if (x=="centimeters²") {
+    return 0.0001
+  } else if (x=="chains²") {
+    return 404.68564224
+  } else if (x=="Chinese chi²") {
+    return 0.1111111111111
+  } else if (x=="cubits²") {
+    return 0.20903184
+  } else if (x=="decameters²") {
+    return 100
+  } else if (x=="decimeters²") {
+    return 0.01
+  } else if (x=="dhur") {
+    return 6.32321316
+  } else if (x=="dhurki") {
+    return 0.316160658
+  } else if (x=="exameters²") {
+    return 1e36
+  } else if (x=="fathoms²") {
+    return 3.34450944
+  } else if (x=="feet²") {
+    return 0.09290304
+  } else if (x=="femtometers²") {
+    return 1e-30
+  } else if (x=="furlongs²") {
+    return 40468.564224
+  } else if (x=="gigameters²") {
+    return 1e18
+  } else if (x=="hectads") {
+    return 1e8
+  } else if (x=="hectares") {
+    return 10000
+  } else if (x=="Hong Kong chi²") {
+    return 0.137993675625
+  } else if (x=="inches²") {
+    return 0.00064516
+  } else if (x=="khata") {
+    return 126.4642632
+  } else if (x=="kilometers²") {
+    return 1000000
+  } else if (x=="leagues²") {
+    return 30869136
+  } else if (x=="li²") {
+    return 250000
+  } else if (x=="links²") {
+    return 0.040468564224
+  } else if (x=="megameters²") {
+    return 1e12
+  } else if (x=="meters²") {
+    return 1
+  } else if (x=="micrometers²") {
+    return 1e-12
+  } else if (x=="miles²") {
+    return 2589988.110336
+  } else if (x=="millimeters²") {
+    return 0.000001
+  } else if (x=="myriads") {
+    return 1e10
+  } else if (x=="nanometers²") {
+    return 1e-18
+  } else if (x=="petameters²") {
+    return 1e30
+  } else if (x=="picometers²") {
+    return 1e-24
+  } else if (x=="rods²") {
+    return 25.29285264
+  } else if (x=="shaku²") {
+    return 0.0918273645546373
+  } else if (x=="terameters²") {
+    return 1e24
+  } else if (x=="tetrads") {
+    return 4000000
+  } else if (x=="yards²") {
+    return 0.83612736
+  } else if (x=="yoctometers²") {
+    return 1e-48
+  } else if (x=="yottameters²") {
+    return 1e48
+  } else if (x=="zeptometers²") {
+    return 1e-42
+  } else if (x=="zettameters²") {
+    return 1e42
+  } else {
+    return NaN
+  }
+}
+function areaconverter() {
+  areanumberinput = document.getElementById("areanumberinput").value
+  areaunitinput = getaccelerationcoefficient(document.getElementById("areaunitinput").value)
+  areaunitoutput = getaccelerationcoefficient(document.getElementById("areaunitoutput").value)
+  areanumberoutput = areanumberinput*areaunitinput/areaunitoutput
+  if ((document.getElementById("areaunitinput").value !== "") && (document.getElementById("areaunitoutput").value !== "")) {
+    document.getElementById("areanumberoutput").innerHTML = format(areanumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
