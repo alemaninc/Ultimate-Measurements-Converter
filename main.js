@@ -654,6 +654,7 @@ function loop() {
   absorbeddoseconverter()
   accelerationconverter()
   angleconverter()
+  areaconverter()
   lengthconverter()
   timeconverter()
 }
