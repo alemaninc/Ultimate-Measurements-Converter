@@ -487,13 +487,13 @@ function getcatalyticactivitycoefficient(x) {
     return NaN
   }
 }
-function areaconverter() {
-  areanumberinput = document.getElementById("areanumberinput").value
-  areaunitinput = getareacoefficient(document.getElementById("areaunitinput").value)
-  areaunitoutput = getareacoefficient(document.getElementById("areaunitoutput").value)
-  areanumberoutput = areanumberinput*areaunitinput/areaunitoutput
-  if ((document.getElementById("areaunitinput").value !== "") && (document.getElementById("areaunitoutput").value !== "")) {
-    document.getElementById("areanumberoutput").innerHTML = format(areanumberoutput)
+function catalyticactivityconverter() {
+  catalyticactivitynumberinput = document.getElementById("catalyticactivitynumberinput").value
+  catalyticactivityunitinput = getcatalyticactivitycoefficient(document.getElementById("catalyticactivityunitinput").value)
+  catalyticactivityunitoutput = getcatalyticactivitycoefficient(document.getElementById("catalyticactivityunitoutput").value)
+  catalyticactivitynumberoutput = catalyticactivitynumberinput*catalyticactivityunitinput/catalyticactivityunitoutput
+  if ((document.getElementById("catalyticactivityunitinput").value !== "") && (document.getElementById("catalyticactivityunitoutput").value !== "")) {
+    document.getElementById("catalyticactivitynumberoutput").innerHTML = format(catalyticactivitynumberoutput)
   }
 }
 
