@@ -649,14 +649,26 @@ function gettimecoefficient(x) {
     return 31556952
   } else if (x=="hours") {
     return 3600
+  } else if (x=="Jovian days") {
+    return 35730
+  } else if (x=="Jovian years") {
+    return 374300334
   } else if (x=="kiloseconds") {
     return 1000
   } else if (x=="leap years") {
     return 31622400
+  } else if (x=="Martian days") {
+    return 88755.244
+  } else if (x=="Martian years") {
+    return 59355048.24
   } else if (x=="megaannums") {
     return 3.155692599e13
   } else if (x=="megaseconds") {
     return 1000000
+  } else if (x=="Mercurian days") {
+    return 5067000
+  } else if (x=="Mercurian years") {
+    return 7600530.24
   } else if (x=="microseconds") {
     return 1e-6
   } else if (x=="millennia") {
@@ -667,12 +679,24 @@ function gettimecoefficient(x) {
     return 60
   } else if (x=="nanoseconds") {
     return 1e-9
+  } else if (x=="Neptunian days") {
+    return 57996
+  } else if (x=="Neptunian years") {
+    return 5200269936
   } else if (x=="petaseconds") {
     return 1e15
   } else if (x=="picoseconds") {
     return 1e-12
   } else if (x=="planck times") {
     return 5.3912e-44
+  } else if (x=="Plutonian days") {
+    return 552960
+  } else if (x=="Plutonian years") {
+    return 7824384000
+  } else if (x=="Saturnian days") {
+    return 38018
+  } else if (x=="Saturnian years") {
+    return 929318400
   } else if (x=="seconds") {
     return 1
   } else if (x=="sidereal years") {
@@ -689,6 +713,14 @@ function gettimecoefficient(x) {
     return 31556925.216
   } else if (x=="universe ages") {
     return 436117076640000000
+  } else if (x=="Uranian days") {
+    return 62035.2
+  } else if (x=="Uranian years") {
+    return 2651356800
+  } else if (x=="Venusian (cytherean) days") {
+    return 10087200
+  } else if (x=="Venusian (cytherean) years") {
+    return 20997360
   } else if (x=="weeks") {
     return 604800
   } else if (x=="yoctoseconds") {
