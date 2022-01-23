@@ -722,6 +722,7 @@ function loop() {
   accelerationconverter()
   angleconverter()
   areaconverter()
+  catalyticactivityconverter()
   lengthconverter()
   timeconverter()
 }
