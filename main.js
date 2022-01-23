@@ -433,6 +433,73 @@ function areaconverter() {
 
 
 
+// Catalytic activity starts here
+var catalyticactivitynumberinput = 1
+var catalyticactivityunitinput = document.getElementById("catalyticactivityunitinput")
+var catalyticactivitynumberoutput = 1
+var catalyticactivityunitoutput = document.getElementById("catalyticactivityunitoutput")
+function getcatalyticactivitycoefficient(x) {
+  if (x=="attokatals") {
+    return 1e-18
+  } else if (x=="centikatals") {
+    return 0.01
+  } else if (x=="decakatals") {
+    return 10
+  } else if (x=="decikatals") {
+    return 0.1
+  } else if (x=="enzyme units") {
+    return 0.00000001666666667
+  } else if (x=="exakatals") {
+    return 1e18
+  } else if (x=="femtokatals") {
+    return 1e-15
+  } else if (x=="gigakatals") {
+    return 1e9
+  } else if (x=="hectokatals") {
+    return 0.01
+  } else if (x=="katals") {
+    return 1
+  } else if (x=="kilokatals") {
+    return 1000
+  } else if (x=="megakatals") {
+    return 1000000
+  } else if (x=="microkatals") {
+    return 0.000001
+  } else if (x=="millikatals") {
+    return 0.001
+  } else if (x=="nanokatals") {
+    return 1e-9
+  } else if (x=="petakatals") {
+    return 1e15
+  } else if (x=="picokatals") {
+    return 1e-12
+  } else if (x=="terakatals") {
+    return 1e12
+  } else if (x=="yoctokatals") {
+    return 1e-24
+  } else if (x=="yottakatals") {
+    return 1e24
+  } else if (x=="zeptokatals") {
+    return 1e-21
+  } else if (x=="zettakatals") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function areaconverter() {
+  areanumberinput = document.getElementById("areanumberinput").value
+  areaunitinput = getareacoefficient(document.getElementById("areaunitinput").value)
+  areaunitoutput = getareacoefficient(document.getElementById("areaunitoutput").value)
+  areanumberoutput = areanumberinput*areaunitinput/areaunitoutput
+  if ((document.getElementById("areaunitinput").value !== "") && (document.getElementById("areaunitoutput").value !== "")) {
+    document.getElementById("areanumberoutput").innerHTML = format(areanumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
