@@ -188,6 +188,8 @@ function getaccelerationcoefficient(x) {
     return 1.3640557e26
   } else if (x=="inches per second²") {
     return 0.0254
+  } else if (x=="kilometers per hour²") {
+    return 0.27777777777778
   } else if (x=="kilometers per second²") {
     return 1000
   } else if (x=="leagues per second²") {
@@ -202,10 +204,14 @@ function getaccelerationcoefficient(x) {
     return 384399000
   } else if (x=="megameters per second²") {
     return 1000000
+  } else if (x=="meters per hour²") {
+    return 0.00027777777778
   } else if (x=="meters per second²") {
     return 1
   } else if (x=="micrometers per second²") {
     return 0.000001
+  } else if (x=="miles per hour²") {
+    return 0.44704
   } else if (x=="miles per second²") {
     return 1609.344
   } else if (x=="millimeters per second²") {
@@ -240,12 +246,6 @@ function getaccelerationcoefficient(x) {
     return 1e-21
   } else if (x=="zettameters per second²") {
     return 1e21
-  } else if (x=="meters per hour²") {
-    return 0.00027777777778
-  } else if (x=="kilometers per hour²") {
-    return 0.27777777777778
-  } else if (x=="miles per hour²") {
-    return 0.44704
   } else {
     return NaN
   }
