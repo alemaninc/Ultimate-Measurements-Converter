@@ -448,7 +448,7 @@ function getcatalyticactivitycoefficient(x) {
   } else if (x=="decikatals") {
     return 0.1
   } else if (x=="enzyme units") {
-    return 0.00000001666666667
+    return 0.00000001666666666666666666667
   } else if (x=="exakatals") {
     return 1e18
   } else if (x=="femtokatals") {
