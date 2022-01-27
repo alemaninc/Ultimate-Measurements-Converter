@@ -500,6 +500,273 @@ function catalyticactivityconverter() {
 
 
 
+// Density starts here
+var densitynumberinput = 1
+var densityunitinput = document.getElementById("densityunitinput")
+var densitynumberoutput = 1
+var densityunitoutput = document.getElementById("densityunitoutput")
+function getdensitycoefficient(x) {
+  if (x=="actinium densities") {
+    return 10070000
+  } else if (x=="aluminum densities") {
+    return 2698000
+  } else if (x=="americium densities") {
+    return 13690000
+  } else if (x=="antimony densities") {
+    return 6685000
+  } else if (x=="argon densities") {
+    return 1783.7
+  } else if (x=="arsenic densities") {
+    return 5776000
+  } else if (x=="attograms per cubic meter") {
+    return 1e-18
+  } else if (x=="barium densities") {
+    return 3594000
+  } else if (x=="berkelium densities") {
+    return 14790000
+  } else if (x=="beryllium densities") {
+    return 1850000
+  } else if (x=="bismuth densities") {
+    return 9807000
+  } else if (x=="boron densities") {
+    return 2340000
+  } else if (x=="bromine densities") {
+    return 3122000
+  } else if (x=="cadmium densities") {
+    return 8690000
+  } else if (x=="caesium densities") {
+    return 1873000
+  } else if (x=="calcium densities") {
+    return 1540000
+  } else if (x=="californium densities") {
+    return 15100000
+  } else if (x=="cerium densities") {
+    return 6770000
+  } else if (x=="chlorine densities") {
+    return 3214
+  } else if (x=="chromium densities") {
+    return 7150000
+  } else if (x=="cobalt densities") {
+    return 8860000
+  } else if (x=="copper densities") {
+    return 8960000
+  } else if (x=="curium densities") {
+    return 13510000
+  } else if (x=="dysprosium densities") {
+    return 8550000
+  } else if (x=="erbium densities") {
+    return 9066000
+  } else if (x=="europium densities") {
+    return 5243000
+  } else if (x=="exatons per cubic meter") {
+    return 1e24
+  } else if (x=="femtograms per cubic meter") {
+    return 1e-15
+  } else if (x=="fluorine densities") {
+    return 1696
+  } else if (x=="francium densities") {
+    return 1870000
+  } else if (x=="gadolinium densities") {
+    return 7895000
+  } else if (x=="gallium densities") {
+    return 5907000
+  } else if (x=="germanium densities") {
+    return 5323000
+  } else if (x=="gigatons per cubic meter") {
+    return 1e15
+  } else if (x=="gold densities") {
+    return 19282000
+  } else if (x=="grams per cubic centimeter") {
+    return 1e6
+  } else if (x=="grams per cubic meter") {
+    return 1
+  } else if (x=="hafnium densities") {
+    return 13310000
+  } else if (x=="helium densities") {
+    return 178.5
+  } else if (x=="holmium densities") {
+    return 8795000
+  } else if (x=="hydrogen densities") {
+    return 89.88
+  } else if (x=="indium densities") {
+    return 7310000
+  } else if (x=="interstellar media") {
+    return 1e-24
+  } else if (x=="iodine densities") {
+    return 4930000
+  } else if (x=="iridium densities") {
+    return 22650000
+  } else if (x=="iron densities") {
+    return 7874000
+  } else if (x=="kilograms per cubic meter") {
+    return 1000
+  } else if (x=="kilotons per cubic meter") {
+    return 1e9
+  } else if (x=="krypton densities") {
+    return 3733
+  } else if (x=="lanthanum densities") {
+    return 6145000
+  } else if (x=="lead densities") {
+    return 11342000
+  } else if (x=="lithium densities") {
+    return 534000
+  } else if (x=="lutetium densities") {
+    return 9840000
+  } else if (x=="magnesium densities") {
+    return 1738000
+  } else if (x=="manganese densities") {
+    return 7440000
+  } else if (x=="megatons per cubic meter") {
+    return 1e12
+  } else if (x=="mercury densities") {
+    return 13533600
+  } else if (x=="micrograms per cubic meter") {
+    return 1e-6
+  } else if (x=="milligrams per cubic meter") {
+    return 0.001
+  } else if (x=="molybdenum densities") {
+    return 10220000
+  } else if (x=="nanograms per cubic meter") {
+    return 1e-9
+  } else if (x=="neodymium densities") {
+    return 7007000
+  } else if (x=="neon densities") {
+    return 899.9
+  } else if (x=="neptunium densities") {
+    return 20450000
+  } else if (x=="nickel densities") {
+    return 8912000
+  } else if (x=="niobium densities") {
+    return 8570000
+  } else if (x=="nitrogen densities") {
+    return 1250.6
+  } else if (x=="nuclear densities") {
+    return 2.3e20
+  } else if (x=="observable universe densities") {
+    return 9.9e-24
+  } else if (x=="osmium densities") {
+    return 22610000
+  } else if (x=="oxygen densities") {
+    return 1429
+  } else if (x=="palladium densities") {
+    return 12020000
+  } else if (x=="petatons per cubic meter") {
+    return 1e21
+  } else if (x=="phosphorus densities") {
+    return 1820000
+  } else if (x=="picograms per cubic meter") {
+    return 1e-12
+  } else if (x=="platinum densities") {
+    return 21460000
+  } else if (x=="plutonium densities") {
+    return 19816000
+  } else if (x=="polonium densities") {
+    return 9320000
+  } else if (x=="potassium densities") {
+    return 862000
+  } else if (x=="pounds per cubic inch") {
+    return 27679904.7102031211936
+  } else if (x=="praseodymium densities") {
+    return 6773000
+  } else if (x=="promethium densities") {
+    return 7260000
+  } else if (x=="protactinium densities") {
+    return 15370000
+  } else if (x=="radium densities") {
+    return 5500000
+  } else if (x=="radon densities") {
+    return 9730
+  } else if (x=="rhenium densities") {
+    return 21020000
+  } else if (x=="rhodium densities") {
+    return 12410000
+  } else if (x=="rubidium densities") {
+    return 1532000
+  } else if (x=="ruthenium densities") {
+    return 12370000
+  } else if (x=="rutherfordium densities") {
+    return 18100000
+  } else if (x=="samarium densities") {
+    return 7520000
+  } else if (x=="scandium densities") {
+    return 2989000
+  } else if (x=="selenium densities") {
+    return 4809000
+  } else if (x=="silicon densities") {
+    return 2329600
+  } else if (x=="silver densities") {
+    return 10501000
+  } else if (x=="slugs per cubic foot") {
+    return 515,378.0405937935308358
+  } else if (x=="sodium densities") {
+    return 971000
+  } else if (x=="strontium densities") {
+    return 2640000
+  } else if (x=="sulfur densities") {
+    return 2067000
+  } else if (x=="tantalum densities") {
+    return 16654000
+  } else if (x=="technetium densities") {
+    return 11500000
+  } else if (x=="tellurium densities") {
+    return 6232000
+  } else if (x=="teratons per cubic meter") {
+    return 1e18
+  } else if (x=="terbium densities") {
+    return 8229000
+  } else if (x=="thallium densities") {
+    return 11850000
+  } else if (x=="thorium densities") {
+    return 11720000
+  } else if (x=="thulium densities") {
+    return 9321000
+  } else if (x=="tin densities") {
+    return 7287000
+  } else if (x=="titanium densities") {
+    return 4540000
+  } else if (x=="tons per cubic meter") {
+    return 1000000
+  } else if (x=="tungsten densities") {
+    return 19250000
+  } else if (x=="uranium densities") {
+    return 18950000
+  } else if (x=="vanadium densities") {
+    return 6110000
+  } else if (x=="xenon densities") {
+    return 5887
+  } else if (x=="yoctograms per cubic meter") {
+    return 1e-24
+  } else if (x=="yottatons per cubic meter") {
+    return 1e30
+  } else if (x=="ytterbium densities") {
+    return 6965000
+  } else if (x=="yttrium densities") {
+    return 4469000
+  } else if (x=="zeptograms per cubic meter") {
+    return 1e-21
+  } else if (x=="zettatons per cubic meter") {
+    return 1e27
+  } else if (x=="zinc densities") {
+    return 7134000
+  } else if (x=="zirconium densities") {
+    return 6506000
+  } else {
+    return NaN
+  }
+}
+function densityconverter() {
+  densitynumberinput = document.getElementById("densitynumberinput").value
+  densityunitinput = getdensitycoefficient(document.getElementById("densityunitinput").value)
+  densityunitoutput = getdensitycoefficient(document.getElementById("densityunitoutput").value)
+  densitynumberoutput = densitynumberinput*densityunitinput/densityunitoutput
+  if ((document.getElementById("densityunitinput").value !== "") && (document.getElementById("densityunitoutput").value !== "")) {
+    document.getElementById("densitynumberoutput").innerHTML = format(densitynumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
@@ -755,6 +1022,7 @@ function loop() {
   angleconverter()
   areaconverter()
   catalyticactivityconverter()
+  densityconverter()
   lengthconverter()
   timeconverter()
 }
