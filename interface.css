@@ -3,7 +3,7 @@ body {
   font-family:"Courier New"
 }
 table {
-  width: 100vw;
+  width: 100%;
 }
 .c1 {
   background-color: #000000;
@@ -12,7 +12,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c2 {
   background-color: #000000;
@@ -21,7 +21,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c3 {
   background-color: #000000;
@@ -30,7 +30,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c4 {
   background-color: #000000;
@@ -39,7 +39,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c5 {
   background-color: #000000;
@@ -48,7 +48,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c6 {
   background-color: #000000;
@@ -57,7 +57,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c7 {
   background-color: #000000;
@@ -66,7 +66,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c8 {
   background-color: #000000;
@@ -75,7 +75,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c9 {
   background-color: #000000;
@@ -84,7 +84,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c10 {
   background-color: #000000;
@@ -93,7 +93,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c11 {
   background-color: #000000;
@@ -102,7 +102,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c12 {
   background-color: #000000;
@@ -111,7 +111,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c13 {
   background-color: #000000;
@@ -120,7 +120,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c14 {
   background-color: #000000;
@@ -129,7 +129,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c15 {
   background-color: #000000;
@@ -138,7 +138,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c16 {
   background-color: #000000;
@@ -147,7 +147,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c17 {
   background-color: #000000;
@@ -156,7 +156,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c18 {
   background-color: #000000;
@@ -165,7 +165,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c19 {
   background-color: #000000;
@@ -174,7 +174,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c20 {
   background-color: #000000;
@@ -183,7 +183,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c21 {
   background-color: #000000;
@@ -192,7 +192,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c22 {
   background-color: #000000;
@@ -201,7 +201,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c23 {
   background-color: #000000;
@@ -210,7 +210,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c24 {
   background-color: #000000;
@@ -219,7 +219,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c25 {
   background-color: #000000;
@@ -228,7 +228,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c26 {
   background-color: #000000;
@@ -237,7 +237,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c27 {
   background-color: #000000;
@@ -246,7 +246,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c28 {
   background-color: #000000;
@@ -255,7 +255,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c29 {
   background-color: #000000;
@@ -264,7 +264,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c30 {
   background-color: #000000;
@@ -273,7 +273,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c31 {
   background-color: #000000;
@@ -282,7 +282,7 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
 .c32 {
   background-color: #000000;
@@ -291,5 +291,5 @@ table {
   text-align: center;
   border-radius: 50px;
   height: 30vh;
-  width: 25vw;
+  width: 100%;
 }
