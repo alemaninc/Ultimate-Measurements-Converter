@@ -767,6 +767,91 @@ function densityconverter() {
 
 
 
+// Electrical resistance starts here
+var electricalresistancenumberinput = 1
+var electricalresistanceunitinput = document.getElementById("electricalresistanceunitinput")
+var electricalresistancenumberoutput = 1
+var electricalresistanceunitoutput = document.getElementById("electricalresistanceunitoutput")
+function getelectricalresistancecoefficient(x) {
+  if (x=="abohms") {
+    return 1e-9
+  } else if (x=="absolute feet per second") {
+    return 3.048e-8
+  } else if (x=="attohms") {
+    return 1e-18
+  } else if (x=="centiohms") {
+    return 0.01
+  } else if (x=="decaohms") {
+    return 10
+  } else if (x=="deciohms") {
+    return 0.1
+  } else if (x=="exaohms") {
+    return 1e18
+  } else if (x=="femtohms") {
+    return 1e15
+  } else if (x=="German miles") {
+    return 57.44
+  } else if (x=="gigaohms") {
+    return 1e9
+  } else if (x=="hectaohms") {
+    return 100
+  } else if (x=="Jacobi copper units") {
+    return 0.6367
+  } else if (x=="kilohms") {
+    return 1000
+  } else if (x=="Matthiessens") {
+    return 13.59
+  } else if (x=="megohms") {
+    return 1000000
+  } else if (x=="microhms") {
+    return 0.000001
+  } else if (x=="milliohms") {
+    return 0.001
+  } else if (x=="nanohms") {
+    return 1e-9
+  } else if (x=="ohms") {
+    return 1
+  } else if (x=="petaohms") {
+    return 1e15
+  } else if (x=="picohms") {
+    return 1e-12
+  } else if (x=="Siemens mercury units") {
+    return 0.9537
+  } else if (x=="statohms") {
+    return 8.987551787e11
+  } else if (x=="teraohms") {
+    return 1e12
+  } else if (x=="Thomson's units") {
+    return 0.3202
+  } else if (x=="Varleys") {
+    return 25.61
+  } else if (x=="Weber's absolute units") {
+    return 9.191e-8
+  } else if (x=="yoctohms") {
+    return 1e-24
+  } else if (x=="yottaohms") {
+    return 1e24
+  } else if (x=="zeptohms") {
+    return 1e-21
+  } else if (x=="zettaohms") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function electricalresistanceconverter() {
+  electricalresistancenumberinput = document.getElementById("electricalresistancenumberinput").value
+  electricalresistanceunitinput = getelectricalresistancecoefficient(document.getElementById("electricalresistanceunitinput").value)
+  electricalresistanceunitoutput = getelectricalresistancecoefficient(document.getElementById("electricalresistanceunitoutput").value)
+  electricalresistancenumberoutput = electricalresistancenumberinput*electricalresistanceunitinput/electricalresistanceunitoutput
+  if ((document.getElementById("electricalresistanceunitinput").value !== "") && (document.getElementById("electricalresistanceunitoutput").value !== "")) {
+    document.getElementById("electricalresistancenumberoutput").innerHTML = format(electricalresistancenumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
@@ -1023,6 +1108,7 @@ function loop() {
   areaconverter()
   catalyticactivityconverter()
   densityconverter()
+  electricalresistanceconverter()
   lengthconverter()
   timeconverter()
 }
