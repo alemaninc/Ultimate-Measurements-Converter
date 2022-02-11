@@ -6,7 +6,7 @@ table {
   width: 100%;
   height: 100%;
 }
-.absorbeddoseconverter {
+.c1 {
   background-color: #000000;
   border: 5px outset #ff0000;
   color: #ff0000;
@@ -15,7 +15,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.accelerationconverter {
+.c2 {
   background-color: #000000;
   border: 5px outset #ff3300;
   color: #ff3300;
@@ -24,7 +24,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.angleconverter {
+.c3 {
   background-color: #000000;
   border: 5px outset #ff6600;
   color: #ff6600;
@@ -33,7 +33,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.areaconverter {
+.c4 {
   background-color: #000000;
   border: 5px outset #ff9900;
   color: #ff9900;
@@ -42,7 +42,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.catalyticactivityconverter {
+.c5 {
   background-color: #000000;
   border: 5px outset #ffcc00;
   color: #ffcc00;
@@ -51,7 +51,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.densityconverter {
+.c6 {
   background-color: #000000;
   border: 5px outset #ffff00;
   color: #ffff00;
@@ -60,7 +60,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.electricalresistanceconverter {
+.c7 {
   background-color: #000000;
   border: 5px outset #ccff00;
   color: #ccff00;
@@ -69,7 +69,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.electricchargeconverter {
+.c8 {
   background-color: #000000;
   border: 5px outset #99ff00;
   color: #99ff00;
@@ -78,7 +78,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.electriccurrentconverter {
+.c9 {
   background-color: #000000;
   border: 5px outset #66ff00;
   color: #66ff00;
@@ -87,7 +87,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.energyconverter {
+.c10 {
   background-color: #000000;
   border: 5px outset #33ff00;
   color: #33ff00;
@@ -96,7 +96,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.equivalentdoseconverter {
+.c11 {
   background-color: #000000;
   border: 5px outset #00ff00;
   color: #00ff00;
@@ -105,7 +105,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.flowconverter {
+.c12 {
   background-color: #000000;
   border: 5px outset #00ff33;
   color: #00ff33;
@@ -114,7 +114,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.forceconverter {
+.c13 {
   background-color: #000000;
   border: 5px outset #00ff66;
   color: #00ff66;
@@ -123,7 +123,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.frequencyconverter {
+.c14 {
   background-color: #000000;
   border: 5px outset #00ff99;
   color: #00ff99;
@@ -132,7 +132,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.illuminanceconverter {
+.c15 {
   background-color: #000000;
   border: 5px outset #00ffcc;
   color: #00ffcc;
@@ -141,7 +141,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.informationconverter {
+.c16 {
   background-color: #000000;
   border: 5px outset #00ffff;
   color: #00ffff;
@@ -150,7 +150,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.lengthconverter {
+.c17 {
   background-color: #000000;
   border: 5px outset #00ccff;
   color: #00ccff;
@@ -159,7 +159,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.luminousfluxconverter {
+.c18 {
   background-color: #000000;
   border: 5px outset #0099ff;
   color: #0099ff;
@@ -168,7 +168,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.luminousintensityconverter {
+.c19 {
   background-color: #000000;
   border: 5px outset #0066ff;
   color: #0066ff;
@@ -177,7 +177,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.magneticfluxconverter {
+.c20 {
   background-color: #000000;
   border: 5px outset #0033ff;
   color: #0033ff;
@@ -186,7 +186,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.massconverter {
+.c21 {
   background-color: #000000;
   border: 5px outset #0000ff;
   color: #0000ff;
@@ -195,7 +195,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.powerconverter {
+.c22 {
   background-color: #000000;
   border: 5px outset #cc00ff;
   color: #cc00ff;
@@ -204,7 +204,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.pressureconverter {
+.c23 {
   background-color: #000000;
   border: 5px outset #6600ff;
   color: #6600ff;
@@ -213,7 +213,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.radioactivityconverter {
+.c24 {
   background-color: #000000;
   border: 5px outset #9900ff;
   color: #9900ff;
@@ -222,7 +222,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.solidangleconverter {
+.c25 {
   background-color: #000000;
   border: 5px outset #cc00ff;
   color: #cc00ff;
@@ -231,7 +231,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.speedconverter {
+.c26 {
   background-color: #000000;
   border: 5px outset #ff00ff;
   color: #ff00ff;
@@ -240,7 +240,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.substanceconverter {
+.c27 {
   background-color: #000000;
   border: 5px outset #ff00cc;
   color: #ff00cc;
@@ -249,7 +249,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.temperatureconverter {
+.c28 {
   background-color: #000000;
   border: 5px outset #ff0099;
   color: #ff0099;
@@ -258,7 +258,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.timeconverter {
+.c29 {
   background-color: #000000;
   border: 5px outset #ff0066;
   color: #ff0066;
@@ -267,7 +267,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.torqueconverter {
+.c30 {
   background-color: #000000;
   border: 5px outset #ff0033;
   color: #ff0033;
@@ -276,7 +276,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.voltageconverter {
+.c31 {
   background-color: #000000;
   border: 5px outset #ffffff;
   color: #ffffff;
@@ -285,7 +285,7 @@ table {
   height: 100%;
   width: 100%;
 }
-.volumeconverter {
+.c32 {
   background-color: #000000;
   border: 5px outset #999999;
   color: #999999;
