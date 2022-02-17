@@ -852,6 +852,69 @@ function electricalresistanceconverter() {
 
 
 
+// Electric charge starts here
+var electricchargenumberinput = 1
+var electricchargeunitinput = document.getElementById("electricchargeunitinput")
+var electricchargenumberoutput = 1
+var electricchargeunitoutput = document.getElementById("electricchargeunitoutput")
+function getelectricchargecoefficient(x) {
+  if (x=="ampere hours") {
+    return 3600
+  } else if  (x=="attocoulombs") {
+    return 1e-18
+  } else if  (x=="coulombs") {
+    return 1
+  } else if  (x=="elementary charges") {
+    return 1.602176634e-19
+  } else if  (x=="exacoulombs") {
+    return 1e18
+  } else if  (x=="femtocoulombs") {
+    return 1e-15
+  } else if  (x=="gigacoulombs") {
+    return 1e9
+  } else if  (x=="kilocoulombs") {
+    return 1000
+  } else if  (x=="megacoulombs") {
+    return 1000000
+  } else if  (x=="microcoulombs") {
+    return 0.000001
+  } else if  (x=="millicoulombs") {
+    return 0.001
+  } else if  (x=="nanocoulombs") {
+    return 1e-9
+  } else if  (x=="petacoulombs") {
+    return 1e15
+  } else if  (x=="picocoulombs") {
+    return 1e-12
+  } else if  (x=="statcoulombs") {
+    return 3.33564e-10
+  } else if  (x=="teracoulombs") {
+    return 1e12
+  } else if  (x=="yoctocoulombs") {
+    return 1e-24
+  } else if  (x=="yottacoulombs") {
+    return 1e24
+  } else if  (x=="zeptocoulombs") {
+    return 1e-21
+  } else if  (x=="zettacoulombs") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function electricchargeconverter() {
+  electricchargenumberinput = document.getElementById("electricchargenumberinput").value
+  electricchargeunitinput = getelectricchargecoefficient(document.getElementById("electricchargeunitinput").value)
+  electricchargeunitoutput = getelectricchargecoefficient(document.getElementById("electricchargeunitoutput").value)
+  electricchargenumberoutput = electricchargenumberinput*electricchargeunitinput/electricchargeunitoutput
+  if ((document.getElementById("electricchargeunitinput").value !== "") && (document.getElementById("electricchargeunitoutput").value !== "")) {
+    document.getElementById("electricchargenumberoutput").innerHTML = format(electricchargenumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
@@ -1109,6 +1172,7 @@ function loop() {
   catalyticactivityconverter()
   densityconverter()
   electricalresistanceconverter()
+  electricchargeconverter()
   lengthconverter()
   timeconverter()
 }
