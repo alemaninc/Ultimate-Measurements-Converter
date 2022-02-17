@@ -1336,6 +1336,7 @@ function loop() {
   densityconverter()
   electricalresistanceconverter()
   electricchargeconverter()
+  electriccurrentconverter()
   energyconverter()
   lengthconverter()
   timeconverter()
