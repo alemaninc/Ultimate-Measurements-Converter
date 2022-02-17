@@ -980,6 +980,104 @@ function electriccurrentconverter() {
 
 
 
+
+// Energy starts here
+var energynumberinput = 1
+var energyunitinput = document.getElementById("energyunitinput")
+var energynumberoutput = 1
+var energyunitoutput = document.getElementById("energyunitoutput")
+function getenergycoefficient(x) {
+    if (x=="attojoules") {
+    return 1e-18
+  } else if  (x=="barrel of oil equivalents") {
+    return 6.118e9
+  } else if  (x=="British thermal units") {
+    return 1055.06
+  } else if  (x=="calories") {
+    return 4.184
+  } else if  (x=="centijoules") {
+    return 0.01
+  } else if  (x=="cubic miles of oil") {
+    return 1.60392477979577e20
+  } else if  (x=="decajoules") {
+    return 10
+  } else if  (x=="decijoules") {
+    return 0.1
+  } else if  (x=="electron volts") {
+    return 1.602176565e-19
+  } else if  (x=="ergs") {
+    return 1e-7
+  } else if  (x=="exajoules") {
+    return 1e18
+  } else if  (x=="femtojoules") {
+    return 1e-15
+  } else if  (x=="foot-pound forces") {
+    return 1.355818
+  } else if  (x=="foot-poundals") {
+    return 0.0421401100938048
+  } else if  (x=="gasoline gallon equivalents") {
+    return 1.213e8
+  } else if  (x=="gigajoules") {
+    return 1e9
+  } else if  (x=="hartrees") {
+    return 4.35974e-18
+  } else if  (x=="hectojoules") {
+    return 0.01
+  } else if  (x=="horsepower-hours") {
+    return 2.6845195368856e6
+  } else if  (x=="joules") {
+    return 1
+  } else if  (x=="kilocalories") {
+    return 4184
+  } else if  (x=="kilojoules") {
+    return 1000
+  } else if  (x=="kilowatt-hours") {
+    return 3.6e6
+  } else if  (x=="megajoules") {
+    return 1000000
+  } else if  (x=="microjoules") {
+    return 0.000001
+  } else if  (x=="millijoules") {
+    return 0.001
+  } else if  (x=="nanojoules") {
+    return 1e-9
+  } else if  (x=="petajoules") {
+    return 1e15
+  } else if  (x=="picojoules") {
+    return 1e-12
+  } else if  (x=="planck energies") {
+    return 1.95465540929999e9
+  } else if  (x=="terajoules") {
+    return 1e12
+  } else if  (x=="ton of oil equivalents") {
+    return 4.1868e10
+  } else if  (x=="universe energies") {
+    return 1.84467440737096e83
+  } else if  (x=="yoctojoules") {
+    return 1e-24
+  } else if  (x=="yottajoules") {
+    return 1e24
+  } else if  (x=="zeptojoules") {
+    return 1e-21
+  } else if  (x=="zettajoules") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function energyconverter() {
+  energynumberinput = document.getElementById("energynumberinput").value
+  energyunitinput = getenergycoefficient(document.getElementById("energyunitinput").value)
+  energyunitoutput = getenergycoefficient(document.getElementById("energyunitoutput").value)
+  energynumberoutput = energynumberinput*energyunitinput/energyunitoutput
+  if ((document.getElementById("energyunitinput").value !== "") && (document.getElementById("energyunitoutput").value !== "")) {
+    document.getElementById("energynumberoutput").innerHTML = format(energynumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
@@ -1238,6 +1336,7 @@ function loop() {
   densityconverter()
   electricalresistanceconverter()
   electricchargeconverter()
+  energyconverter()
   lengthconverter()
   timeconverter()
 }
