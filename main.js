@@ -915,6 +915,71 @@ function electricchargeconverter() {
 
 
 
+// Electric current starts here
+var electriccurrentnumberinput = 1
+var electriccurrentunitinput = document.getElementById("electriccurrentunitinput")
+var electriccurrentnumberoutput = 1
+var electriccurrentunitoutput = document.getElementById("electriccurrentunitoutput")
+function getelectriccurrentcoefficient(x) {
+  if (x=="ampere") {
+    return 1
+  } else if  (x=="attoampere") {
+    return 1e-18
+  } else if  (x=="centiampere") {
+    return 0.01
+  } else if  (x=="decaampere") {
+    return 10
+  } else if  (x=="deciampere") {
+    return 0.1
+  } else if  (x=="exaampere") {
+    return 1e18
+  } else if  (x=="femtoampere") {
+    return 1e-15
+  } else if  (x=="gigaampere") {
+    return 1e9
+  } else if  (x=="hectaampere") {
+    return 100
+  } else if  (x=="kiloampere") {
+    return 1000
+  } else if  (x=="megaampere") {
+    return 1000000
+  } else if  (x=="microampere") {
+    return 0.000001
+  } else if  (x=="milliampere") {
+    return 0.001
+  } else if  (x=="nanoampere") {
+    return 1e-9
+  } else if  (x=="petaampere") {
+    return 1e15
+  } else if  (x=="picoampere") {
+    return 1e-12
+  } else if  (x=="teraampere") {
+    return 1e12
+  } else if  (x=="yoctoampere") {
+    return 1e-24
+  } else if  (x=="yottaampere") {
+    return 1e24
+  } else if  (x=="zeptoampere") {
+    return 1e-21
+  } else if  (x=="zettaampere") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function electriccurrentconverter() {
+  electriccurrentnumberinput = document.getElementById("electriccurrentnumberinput").value
+  electriccurrentunitinput = getelectriccurrentcoefficient(document.getElementById("electriccurrentunitinput").value)
+  electriccurrentunitoutput = getelectriccurrentcoefficient(document.getElementById("electriccurrentunitoutput").value)
+  electriccurrentnumberoutput = electriccurrentnumberinput*electriccurrentunitinput/electriccurrentunitoutput
+  if ((document.getElementById("electriccurrentunitinput").value !== "") && (document.getElementById("electriccurrentunitoutput").value !== "")) {
+    document.getElementById("electriccurrentnumberoutput").innerHTML = format(electriccurrentnumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
