@@ -1133,7 +1133,7 @@ function getequivalentdosecoefficient(x) {
   }
 }
 function equivalentdoseconverter() {
-  equivalentdosenumberinput = document.getElementById(equivalentdosenumberinput").value
+  equivalentdosenumberinput = document.getElementById("equivalentdosenumberinput").value
   equivalentdoseunitinput = getequivalentdosecoefficient(document.getElementById("equivalentdoseunitinput").value)
   equivalentdoseunitoutput = getequivalentdosecoefficient(document.getElementById("equivalentdoseunitoutput").value)
   equivalentdosenumberoutput = equivalentdosenumberinput*equivalentdoseunitinput/equivalentdoseunitoutput
