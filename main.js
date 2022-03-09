@@ -987,7 +987,7 @@ var energyunitinput = document.getElementById("energyunitinput")
 var energynumberoutput = 1
 var energyunitoutput = document.getElementById("energyunitoutput")
 function getenergycoefficient(x) {
-    if (x=="attojoules") {
+  if (x=="attojoules") {
     return 1e-18
   } else if  (x=="barrel of oil equivalents") {
     return 6.118e9
@@ -1072,6 +1072,73 @@ function energyconverter() {
   energynumberoutput = energynumberinput*energyunitinput/energyunitoutput
   if ((document.getElementById("energyunitinput").value !== "") && (document.getElementById("energyunitoutput").value !== "")) {
     document.getElementById("energynumberoutput").innerHTML = format(energynumberoutput)
+  }
+}
+
+
+
+
+// Equivalent dose starts here
+var equivalentdosenumberinput = 1
+var equivalentdoseunitinput = document.getElementById("equivalentdoseunitinput")
+var equivalentdosenumberoutput = 1
+var equivalentdoseunitoutput = document.getElementById("equivalentdoseunitoutput")
+function getequivalentdosecoefficient(x) {
+  if (x=="attosieverts") {
+    return 1e-18
+  } else if  (x=="banana equivalent doses") {
+    return 1e-7
+  } else if  (x=="centisieverts") {
+    return 0.01
+  } else if  (x=="decasieverts") {
+    return 10
+  } else if  (x=="decisieverts") {
+    return 0.1
+  } else if  (x=="exasieverts") {
+    return 1e18
+  } else if  (x=="femtosieverts") {
+    return 1e-15
+  } else if  (x=="gigasieverts") {
+    return 1e9
+  } else if  (x=="hectosieverts") {
+    return 100
+  } else if  (x=="kilosieverts") {
+    return 1000
+  } else if  (x=="megasieverts") {
+    return 1000000
+  } else if  (x=="microsieverts") {
+    return 0.000001
+  } else if  (x=="millisieverts") {
+    return 0.001
+  } else if  (x=="nanosieverts") {
+    return 1e-9
+  } else if  (x=="petasieverts") {
+    return 1e15
+  } else if  (x=="picosieverts") {
+    return 1e-12
+  } else if  (x=="roentgen equivalent mans") {
+    return 0.01
+  } else if  (x=="sieverts") {
+    return 1
+  } else if  (x=="terasieverts") {
+    return 1e12
+  } else if  (x=="yoctosieverts") {
+    return 1e-24
+  } else if  (x=="yottasieverts") {
+    return 1e24
+  } else if  (x=="zeptosieverts") {
+    return 1e-21
+  } else if (x=="zettasieverts") {
+    return 1e21
+  }
+}
+function equivalentdoseconverter() {
+  equivalentdosenumberinput = document.getElementById(equivalentdosenumberinput").value
+  equivalentdoseunitinput = getequivalentdosecoefficient(document.getElementById("equivalentdoseunitinput").value)
+  equivalentdoseunitoutput = getequivalentdosecoefficient(document.getElementById("equivalentdoseunitoutput").value)
+  equivalentdosenumberoutput = equivalentdosenumberinput*equivalentdoseunitinput/equivalentdoseunitoutput
+  if ((document.getElementById("equivalentdoseunitinput").value !== "") && (document.getElementById("equivalentdoseunitoutput").value !== "")) {
+    document.getElementById("equivalentdosenumberoutput").innerHTML = format(equivalentdosenumberoutput)
   }
 }
 
@@ -1338,6 +1405,7 @@ function loop() {
   electricchargeconverter()
   electriccurrentconverter()
   energyconverter()
+  equivalentdoseconverter()
   lengthconverter()
   timeconverter()
 }
