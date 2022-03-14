@@ -860,43 +860,43 @@ var electricchargeunitoutput = document.getElementById("electricchargeunitoutput
 function getelectricchargecoefficient(x) {
   if (x=="ampere hours") {
     return 3600
-  } else if  (x=="attocoulombs") {
+  } else if (x=="attocoulombs") {
     return 1e-18
-  } else if  (x=="coulombs") {
+  } else if (x=="coulombs") {
     return 1
-  } else if  (x=="elementary charges") {
+  } else if (x=="elementary charges") {
     return 1.602176634e-19
-  } else if  (x=="exacoulombs") {
+  } else if (x=="exacoulombs") {
     return 1e18
-  } else if  (x=="femtocoulombs") {
+  } else if (x=="femtocoulombs") {
     return 1e-15
-  } else if  (x=="gigacoulombs") {
+  } else if (x=="gigacoulombs") {
     return 1e9
-  } else if  (x=="kilocoulombs") {
+  } else if (x=="kilocoulombs") {
     return 1000
-  } else if  (x=="megacoulombs") {
+  } else if (x=="megacoulombs") {
     return 1000000
-  } else if  (x=="microcoulombs") {
+  } else if (x=="microcoulombs") {
     return 0.000001
-  } else if  (x=="millicoulombs") {
+  } else if (x=="millicoulombs") {
     return 0.001
-  } else if  (x=="nanocoulombs") {
+  } else if (x=="nanocoulombs") {
     return 1e-9
-  } else if  (x=="petacoulombs") {
+  } else if (x=="petacoulombs") {
     return 1e15
-  } else if  (x=="picocoulombs") {
+  } else if (x=="picocoulombs") {
     return 1e-12
-  } else if  (x=="statcoulombs") {
+  } else if (x=="statcoulombs") {
     return 3.33564e-10
-  } else if  (x=="teracoulombs") {
+  } else if (x=="teracoulombs") {
     return 1e12
-  } else if  (x=="yoctocoulombs") {
+  } else if (x=="yoctocoulombs") {
     return 1e-24
-  } else if  (x=="yottacoulombs") {
+  } else if (x=="yottacoulombs") {
     return 1e24
-  } else if  (x=="zeptocoulombs") {
+  } else if (x=="zeptocoulombs") {
     return 1e-21
-  } else if  (x=="zettacoulombs") {
+  } else if (x=="zettacoulombs") {
     return 1e21
   } else {
     return NaN
@@ -923,45 +923,45 @@ var electriccurrentunitoutput = document.getElementById("electriccurrentunitoutp
 function getelectriccurrentcoefficient(x) {
   if (x=="ampere") {
     return 1
-  } else if  (x=="attoampere") {
+  } else if (x=="attoampere") {
     return 1e-18
-  } else if  (x=="centiampere") {
+  } else if (x=="centiampere") {
     return 0.01
-  } else if  (x=="decaampere") {
+  } else if (x=="decaampere") {
     return 10
-  } else if  (x=="deciampere") {
+  } else if (x=="deciampere") {
     return 0.1
-  } else if  (x=="exaampere") {
+  } else if (x=="exaampere") {
     return 1e18
-  } else if  (x=="femtoampere") {
+  } else if (x=="femtoampere") {
     return 1e-15
-  } else if  (x=="gigaampere") {
+  } else if (x=="gigaampere") {
     return 1e9
-  } else if  (x=="hectaampere") {
+  } else if (x=="hectaampere") {
     return 100
-  } else if  (x=="kiloampere") {
+  } else if (x=="kiloampere") {
     return 1000
-  } else if  (x=="megaampere") {
+  } else if (x=="megaampere") {
     return 1000000
-  } else if  (x=="microampere") {
+  } else if (x=="microampere") {
     return 0.000001
-  } else if  (x=="milliampere") {
+  } else if (x=="milliampere") {
     return 0.001
-  } else if  (x=="nanoampere") {
+  } else if (x=="nanoampere") {
     return 1e-9
-  } else if  (x=="petaampere") {
+  } else if (x=="petaampere") {
     return 1e15
-  } else if  (x=="picoampere") {
+  } else if (x=="picoampere") {
     return 1e-12
-  } else if  (x=="teraampere") {
+  } else if (x=="teraampere") {
     return 1e12
-  } else if  (x=="yoctoampere") {
+  } else if (x=="yoctoampere") {
     return 1e-24
-  } else if  (x=="yottaampere") {
+  } else if (x=="yottaampere") {
     return 1e24
-  } else if  (x=="zeptoampere") {
+  } else if (x=="zeptoampere") {
     return 1e-21
-  } else if  (x=="zettaampere") {
+  } else if (x=="zettaampere") {
     return 1e21
   } else {
     return NaN
@@ -989,77 +989,77 @@ var energyunitoutput = document.getElementById("energyunitoutput")
 function getenergycoefficient(x) {
   if (x=="attojoules") {
     return 1e-18
-  } else if  (x=="barrel of oil equivalents") {
+  } else if (x=="barrel of oil equivalents") {
     return 6.118e9
-  } else if  (x=="British thermal units") {
+  } else if (x=="British thermal units") {
     return 1055.06
-  } else if  (x=="calories") {
+  } else if (x=="calories") {
     return 4.184
-  } else if  (x=="centijoules") {
+  } else if (x=="centijoules") {
     return 0.01
-  } else if  (x=="cubic miles of oil") {
+  } else if (x=="cubic miles of oil") {
     return 1.60392477979577e20
-  } else if  (x=="decajoules") {
+  } else if (x=="decajoules") {
     return 10
-  } else if  (x=="decijoules") {
+  } else if (x=="decijoules") {
     return 0.1
-  } else if  (x=="electron volts") {
+  } else if (x=="electron volts") {
     return 1.602176565e-19
-  } else if  (x=="ergs") {
+  } else if (x=="ergs") {
     return 1e-7
-  } else if  (x=="exajoules") {
+  } else if (x=="exajoules") {
     return 1e18
-  } else if  (x=="femtojoules") {
+  } else if (x=="femtojoules") {
     return 1e-15
-  } else if  (x=="foot-pound forces") {
+  } else if (x=="foot-pound forces") {
     return 1.355818
-  } else if  (x=="foot-poundals") {
+  } else if (x=="foot-poundals") {
     return 0.0421401100938048
-  } else if  (x=="gasoline gallon equivalents") {
+  } else if (x=="gasoline gallon equivalents") {
     return 1.213e8
-  } else if  (x=="gigajoules") {
+  } else if (x=="gigajoules") {
     return 1e9
-  } else if  (x=="hartrees") {
+  } else if (x=="hartrees") {
     return 4.35974e-18
-  } else if  (x=="hectojoules") {
+  } else if (x=="hectojoules") {
     return 0.01
-  } else if  (x=="horsepower-hours") {
+  } else if (x=="horsepower-hours") {
     return 2.6845195368856e6
-  } else if  (x=="joules") {
+  } else if (x=="joules") {
     return 1
-  } else if  (x=="kilocalories") {
+  } else if (x=="kilocalories") {
     return 4184
-  } else if  (x=="kilojoules") {
+  } else if (x=="kilojoules") {
     return 1000
-  } else if  (x=="kilowatt-hours") {
+  } else if (x=="kilowatt-hours") {
     return 3.6e6
-  } else if  (x=="megajoules") {
+  } else if (x=="megajoules") {
     return 1000000
-  } else if  (x=="microjoules") {
+  } else if (x=="microjoules") {
     return 0.000001
-  } else if  (x=="millijoules") {
+  } else if (x=="millijoules") {
     return 0.001
-  } else if  (x=="nanojoules") {
+  } else if (x=="nanojoules") {
     return 1e-9
-  } else if  (x=="petajoules") {
+  } else if (x=="petajoules") {
     return 1e15
-  } else if  (x=="picojoules") {
+  } else if (x=="picojoules") {
     return 1e-12
-  } else if  (x=="planck energies") {
+  } else if (x=="planck energies") {
     return 1.95465540929999e9
-  } else if  (x=="terajoules") {
+  } else if (x=="terajoules") {
     return 1e12
-  } else if  (x=="ton of oil equivalents") {
+  } else if (x=="ton of oil equivalents") {
     return 4.1868e10
-  } else if  (x=="universe energies") {
+  } else if (x=="universe energies") {
     return 1.84467440737096e83
-  } else if  (x=="yoctojoules") {
+  } else if (x=="yoctojoules") {
     return 1e-24
-  } else if  (x=="yottajoules") {
+  } else if (x=="yottajoules") {
     return 1e24
-  } else if  (x=="zeptojoules") {
+  } else if (x=="zeptojoules") {
     return 1e-21
-  } else if  (x=="zettajoules") {
+  } else if (x=="zettajoules") {
     return 1e21
   } else {
     return NaN
@@ -1086,47 +1086,47 @@ var equivalentdoseunitoutput = document.getElementById("equivalentdoseunitoutput
 function getequivalentdosecoefficient(x) {
   if (x=="attosieverts") {
     return 1e-18
-  } else if  (x=="banana equivalent doses") {
+  } else if (x=="banana equivalent doses") {
     return 1e-7
-  } else if  (x=="centisieverts") {
+  } else if (x=="centisieverts") {
     return 0.01
-  } else if  (x=="decasieverts") {
+  } else if (x=="decasieverts") {
     return 10
-  } else if  (x=="decisieverts") {
+  } else if (x=="decisieverts") {
     return 0.1
-  } else if  (x=="exasieverts") {
+  } else if (x=="exasieverts") {
     return 1e18
-  } else if  (x=="femtosieverts") {
+  } else if (x=="femtosieverts") {
     return 1e-15
-  } else if  (x=="gigasieverts") {
+  } else if (x=="gigasieverts") {
     return 1e9
-  } else if  (x=="hectosieverts") {
+  } else if (x=="hectosieverts") {
     return 100
-  } else if  (x=="kilosieverts") {
+  } else if (x=="kilosieverts") {
     return 1000
-  } else if  (x=="megasieverts") {
+  } else if (x=="megasieverts") {
     return 1000000
-  } else if  (x=="microsieverts") {
+  } else if (x=="microsieverts") {
     return 0.000001
-  } else if  (x=="millisieverts") {
+  } else if (x=="millisieverts") {
     return 0.001
-  } else if  (x=="nanosieverts") {
+  } else if (x=="nanosieverts") {
     return 1e-9
-  } else if  (x=="petasieverts") {
+  } else if (x=="petasieverts") {
     return 1e15
-  } else if  (x=="picosieverts") {
+  } else if (x=="picosieverts") {
     return 1e-12
-  } else if  (x=="roentgen equivalent mans") {
+  } else if (x=="roentgen equivalent mans") {
     return 0.01
-  } else if  (x=="sieverts") {
+  } else if (x=="sieverts") {
     return 1
-  } else if  (x=="terasieverts") {
+  } else if (x=="terasieverts") {
     return 1e12
-  } else if  (x=="yoctosieverts") {
+  } else if (x=="yoctosieverts") {
     return 1e-24
-  } else if  (x=="yottasieverts") {
+  } else if (x=="yottasieverts") {
     return 1e24
-  } else if  (x=="zeptosieverts") {
+  } else if (x=="zeptosieverts") {
     return 1e-21
   } else if (x=="zettasieverts") {
     return 1e21
@@ -1139,6 +1139,225 @@ function equivalentdoseconverter() {
   equivalentdosenumberoutput = equivalentdosenumberinput*equivalentdoseunitinput/equivalentdoseunitoutput
   if ((document.getElementById("equivalentdoseunitinput").value !== "") && (document.getElementById("equivalentdoseunitoutput").value !== "")) {
     document.getElementById("equivalentdosenumberoutput").innerHTML = format(equivalentdosenumberoutput)
+  }
+}
+
+
+
+
+// Flow starts here
+var flownumberinput = 1
+var flowunitinput = document.getElementById("flowunitinput")
+var flownumberoutput = 1
+var flowunitoutput = document.getElementById("flowunitoutput")
+function getflowcoefficient(x) {
+    if (x=="Amazon discharges") {
+    return 209000
+  } else if (x=="attometers per day") {
+    return 1.15740740740741e-23
+  } else if (x=="attometers per hour") {
+    return 2.77777777777778e-22
+  } else if (x=="attometers per minute") {
+    return 1.66666666666667e-20
+  } else if (x=="attometers per second") {
+    return 1e-18
+  } else if (x=="Brahmaputra discharges") {
+    return 19824
+  } else if (x=="centimeters per day") {
+    return 1.15740740740741e-7
+  } else if (x=="centimeters per hour") {
+    return 2.77777777777778E-06
+  } else if (x=="centimeters per minute") {
+    return 0.000166666666666667
+  } else if (x=="centimeters per second") {
+    return 0.01
+  } else if (x=="Congo/Zaire discharges") {
+    return 41200
+  } else if (x=="cubic feet per second") {
+    return 0.028316846592
+  } else if (x=="decameters per day") {
+    return 0.000115740740740741
+  } else if (x=="decameters per hour") {
+    return 0.00277777777777778
+  } else if (x=="decameters per minute") {
+    return 0.166666666666667
+  } else if (x=="decameters per second") {
+    return 10
+  } else if (x=="decimeters per day") {
+    return 1.15740740740741E-06
+  } else if (x=="decimeters per hour") {
+    return 2.77777777777778E-05
+  } else if (x=="decimeters per minute") {
+    return 0.00166666666666667
+  } else if (x=="decimeters per second") {
+    return 0.1
+  } else if (x=="exameters per day") {
+    return 1.15740740740741e13
+  } else if (x=="exameters per hour") {
+    return 2.77777777777778e14
+  } else if (x=="exameters per minute") {
+    return 1.66666666666667e16
+  } else if (x=="exameters per second") {
+    return 1e18
+  } else if (x=="femtometers per day") {
+    return 1.15740740740741e-20
+  } else if (x=="femtometers per hour") {
+    return 2.77777777777778e-19
+  } else if (x=="femtometers per minute") {
+    return 1.66666666666667e-17
+  } else if (x=="femtometers per second") {
+    return 1e-15
+  } else if (x=="Ganges discharges") {
+    return 38129
+  } else if (x=="gigameters per day") {
+    return 11574.0740740741
+  } else if (x=="gigameters per hour") {
+    return 277777.777777778
+  } else if (x=="gigameters per minute") {
+    return 1.66666666666667e7
+  } else if (x=="gigameters per second") {
+    return 1e9
+  } else if (x=="hectometers per day") {
+    return 0.00115740740740741
+  } else if (x=="hectometers per hour") {
+    return 0.0277777777777778
+  } else if (x=="hectometers per minute") {
+    return 1.66666666666667
+  } else if (x=="hectometers per second") {
+    return 100
+  } else if (x=="imperial gallons per minute") {
+    return 0.00007576816667
+  } else if (x=="kilometers per day") {
+    return 0.0115740740740741
+  } else if (x=="kilometers per hour") {
+    return 0.277777777777778
+  } else if (x=="kilometers per minute") {
+    return 16.6666666666667
+  } else if (x=="kilometers per second") {
+    return 1000
+  } else if (x=="Madeira discharges") {
+    return 31200
+  } else if (x=="megameters per day") {
+    return 11.5740740740741
+  } else if (x=="megameters per hour") {
+    return 277.777777777778
+  } else if (x=="megameters per minute") {
+    return 16666.6666666667
+  } else if (x=="megameters per second") {
+    return 1000000
+  } else if (x=="meters per day") {
+    return 1.15740740740741E-05
+  } else if (x=="meters per hour") {
+    return 0.000277777777777778
+  } else if (x=="meters per minute") {
+    return 0.0166666666666667
+  } else if (x=="meters per second") {
+    return 1
+  } else if (x=="micrometers per day") {
+    return 1.15740740740741e-11
+  } else if (x=="micrometers per hour") {
+    return 2.77777777777778e-10
+  } else if (x=="micrometers per minute") {
+    return 1.66666666666667e-8
+  } else if (x=="micrometers per second") {
+    return 0.000001
+  } else if (x=="millimeters per day") {
+    return 1.15740740740741e-8
+  } else if (x=="millimeters per hour") {
+    return 2.77777777777778e-7
+  } else if (x=="millimeters per minute") {
+    return 1.66666666666667E-05
+  } else if (x=="millimeters per second") {
+    return 0.001
+  } else if (x=="millions of US gallons per day") {
+    return 0.04381263639
+  } else if (x=="nanometers per day") {
+    return 1.15740740740741e-14
+  } else if (x=="nanometers per hour") {
+    return 2.77777777777778e-13
+  } else if (x=="nanometers per minute") {
+    return 1.66666666666667e-11
+  } else if (x=="nanometers per second") {
+    return 1e-9
+  } else if (x=="Orinoco discharges") {
+    return 37740
+  } else if (x=="petameters per day") {
+    return 1.15740740740741e10
+  } else if (x=="petameters per hour") {
+    return 2.77777777777778e11
+  } else if (x=="petameters per minute") {
+    return 1.66666666666667e13
+  } else if (x=="petameters per second") {
+    return 1e15
+  } else if (x=="picometers per day") {
+    return 1.15740740740741e-17
+  } else if (x=="picometers per hour") {
+    return 2.77777777777778e-16
+  } else if (x=="picometers per minute") {
+    return 1.66666666666667e-14
+  } else if (x=="picometers per second") {
+    return 1e-12
+  } else if (x=="Rio de la Plata discharges") {
+    return 27225
+  } else if (x=="Rio Negro discharges") {
+    return 35943
+  } else if (x=="sverdrup") {
+    return 1000000
+  } else if (x=="terameters per day") {
+    return 1.15740740740741e7
+  } else if (x=="terameters per hour") {
+    return 2.77777777777778e8
+  } else if (x=="terameters per minute") {
+    return 1.66666666666667e10
+  } else if (x=="terameters per second") {
+    return 1e12
+  } else if (x=="US gallons per minute") {
+    return 0.0000630901964
+  } else if (x=="Yangtze discharges") {
+    return 30146
+  } else if (x=="Yenisei discharges") {
+    return 19800
+  } else if (x=="yoctometers per day") {
+    return 1.15740740740741e-29
+  } else if (x=="yoctometers per hour") {
+    return 2.77777777777778e-28
+  } else if (x=="yoctometers per minute") {
+    return 1.66666666666667e-26
+  } else if (x=="yoctometers per second") {
+    return 1e-24
+  } else if (x=="yottameters per day") {
+    return 1.15740740740741e19
+  } else if (x=="yottameters per hour") {
+    return 2.77777777777778e20
+  } else if (x=="yottameters per minute") {
+    return 1.66666666666667e22
+  } else if (x=="yottameters per second") {
+    return 1e24
+  } else if (x=="zeptometers per day") {
+    return 1.15740740740741e-26
+  } else if (x=="zeptometers per hour") {
+    return 2.77777777777778e-25
+  } else if (x=="zeptometers per minute") {
+    return 1.66666666666667e-23
+  } else if (x=="zeptometers per second") {
+    return 1e-21
+  } else if (x=="zettameters per day") {
+    return 1.15740740740741e16
+  } else if (x=="zettameters per hour") {
+    return 2.77777777777778e17
+  } else if (x=="zettameters per minute") {
+    return 1.66666666666667e19
+  } else if (x=="zettameters per second") {
+    return 1e21
+  }
+}
+function flowconverter() {
+  flownumberinput = document.getElementById("flownumberinput").value
+  flowunitinput = getflowcoefficient(document.getElementById("flowunitinput").value)
+  flowunitoutput = getflowcoefficient(document.getElementById("flowunitoutput").value)
+  flownumberoutput = flownumberinput*flowunitinput/flowunitoutput
+  if ((document.getElementById("flowunitinput").value !== "") && (document.getElementById("flowunitoutput").value !== "")) {
+    document.getElementById("flownumberoutput").innerHTML = format(flownumberoutput)
   }
 }
 
@@ -1406,6 +1625,7 @@ function loop() {
   electriccurrentconverter()
   energyconverter()
   equivalentdoseconverter()
+  flowconverter()
   lengthconverter()
   timeconverter()
 }
