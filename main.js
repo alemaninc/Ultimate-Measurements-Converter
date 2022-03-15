@@ -1155,149 +1155,149 @@ var flowunitoutput = document.getElementById("flowunitoutput")
 function getflowcoefficient(x) {
   if (x=="Amazon discharges") {
     return 209000
-  } else if (x=="attometers per day") {
+  } else if (x=="cubic attometers per day") {
     return 1.15740740740741e-59
-  } else if (x=="attometers per hour") {
+  } else if (x=="cubic attometers per hour") {
     return 2.77777777777778e-58
-  } else if (x=="attometers per minute") {
+  } else if (x=="cubic attometers per minute") {
     return 1.66666666666667e-56
-  } else if (x=="attometers per second") {
+  } else if (x=="cubic attometers per second") {
     return 1e-54
   } else if (x=="Brahmaputra discharges") {
     return 19824
-  } else if (x=="centimeters per day") {
+  } else if (x=="cubic centimeters per day") {
     return 1.15740740740741e-11
-  } else if (x=="centimeters per hour") {
+  } else if (x=="cubic centimeters per hour") {
     return 2.77777777777778e-10
-  } else if (x=="centimeters per minute") {
+  } else if (x=="cubic centimeters per minute") {
     return 1.66666666666667e-8
-  } else if (x=="centimeters per second") {
+  } else if (x=="cubic centimeters per second") {
     return 0.000001
   } else if (x=="Congo/Zaire discharges") {
     return 41200
   } else if (x=="cubic feet per second") {
     return 0.028316846592
-  } else if (x=="decameters per day") {
+  } else if (x=="cubic decameters per day") {
     return 0.0115740740740741
-  } else if (x=="decameters per hour") {
+  } else if (x=="cubic decameters per hour") {
     return 0.277777777777778
-  } else if (x=="decameters per minute") {
+  } else if (x=="cubic decameters per minute") {
     return 16.6666666666667
-  } else if (x=="decameters per second") {
+  } else if (x=="cubic decameters per second") {
     return 1000
-  } else if (x=="decimeters per day") {
+  } else if (x=="cubic decimeters per day") {
     return 1.15740740740741e-8
-  } else if (x=="decimeters per hour") {
+  } else if (x=="cubic decimeters per hour") {
     return 2.77777777777778e-7
-  } else if (x=="decimeters per minute") {
+  } else if (x=="cubic decimeters per minute") {
     return 1.66666666666667E-05
-  } else if (x=="decimeters per second") {
+  } else if (x=="cubic decimeters per second") {
     return 0.001
-  } else if (x=="exameters per day") {
+  } else if (x=="cubic exameters per day") {
     return 1.15740740740741e49
-  } else if (x=="exameters per hour") {
+  } else if (x=="cubic exameters per hour") {
     return 2.77777777777778e50
-  } else if (x=="exameters per minute") {
+  } else if (x=="cubic exameters per minute") {
     return 1.66666666666667e52
-  } else if (x=="exameters per second") {
+  } else if (x=="cubic exameters per second") {
     return 1e54
-  } else if (x=="femtometers per day") {
+  } else if (x=="cubic femtometers per day") {
     return 1.15740740740741e-50
-  } else if (x=="femtometers per hour") {
+  } else if (x=="cubic femtometers per hour") {
     return 2.77777777777778e-49
-  } else if (x=="femtometers per minute") {
+  } else if (x=="cubic femtometers per minute") {
     return 1.66666666666667e-47
-  } else if (x=="femtometers per second") {
+  } else if (x=="cubic femtometers per second") {
     return 1e-45
   } else if (x=="Ganges discharges") {
     return 38129
-  } else if (x=="gigameters per day") {
+  } else if (x=="cubic gigameters per day") {
     return 1.15740740740741e22
-  } else if (x=="gigameters per hour") {
+  } else if (x=="cubic gigameters per hour") {
     return 2.77777777777778e23
-  } else if (x=="gigameters per minute") {
+  } else if (x=="cubic gigameters per minute") {
     return 1.66666666666667e25
-  } else if (x=="gigameters per second") {
+  } else if (x=="cubic gigameters per second") {
     return 1e27
-  } else if (x=="hectometers per day") {
+  } else if (x=="cubic hectometers per day") {
     return 11.5740740740741
-  } else if (x=="hectometers per hour") {
+  } else if (x=="cubic hectometers per hour") {
     return 277.777777777778
-  } else if (x=="hectometers per minute") {
+  } else if (x=="cubic hectometers per minute") {
     return 16666.6666666667
-  } else if (x=="hectometers per second") {
+  } else if (x=="cubic hectometers per second") {
     return 1000000
   } else if (x=="imperial gallons per minute") {
     return 0.00007576816667
-  } else if (x=="kilometers per day") {
+  } else if (x=="cubic kilometers per day") {
     return 11574.0740740741
-  } else if (x=="kilometers per hour") {
+  } else if (x=="cubic kilometers per hour") {
     return 277777.777777778
-  } else if (x=="kilometers per minute") {
+  } else if (x=="cubic kilometers per minute") {
     return 1.66666666666667e7
-  } else if (x=="kilometers per second") {
+  } else if (x=="cubic kilometers per second") {
     return 1e9
   } else if (x=="Madeira discharges") {
     return 31200
-  } else if (x=="megameters per day") {
+  } else if (x=="cubic megameters per day") {
     return 1.15740740740741e13
-  } else if (x=="megameters per hour") {
+  } else if (x=="cubic megameters per hour") {
     return 2.77777777777778e14
-  } else if (x=="megameters per minute") {
+  } else if (x=="cubic megameters per minute") {
     return 1.66666666666667e16
-  } else if (x=="megameters per second") {
+  } else if (x=="cubic megameters per second") {
     return 1e18
-  } else if (x=="meters per day") {
+  } else if (x=="cubic meters per day") {
     return 1.15740740740741E-05
-  } else if (x=="meters per hour") {
+  } else if (x=="cubic meters per hour") {
     return 0.000277777777777778
-  } else if (x=="meters per minute") {
+  } else if (x=="cubic meters per minute") {
     return 0.0166666666666667
-  } else if (x=="meters per second") {
+  } else if (x=="cubic meters per second") {
     return 1
-  } else if (x=="micrometers per day") {
+  } else if (x=="cubic micrometers per day") {
     return 1.15740740740741e-23
-  } else if (x=="micrometers per hour") {
+  } else if (x=="cubic micrometers per hour") {
     return 2.77777777777778e-22
-  } else if (x=="micrometers per minute") {
+  } else if (x=="cubic micrometers per minute") {
     return 1.66666666666667e-20
-  } else if (x=="micrometers per second") {
+  } else if (x=="cubic micrometers per second") {
     return 1e-18
-  } else if (x=="millimeters per day") {
+  } else if (x=="cubic millimeters per day") {
     return 1.15740740740741e-14
-  } else if (x=="millimeters per hour") {
+  } else if (x=="cubic millimeters per hour") {
     return 2.77777777777778e-13
-  } else if (x=="millimeters per minute") {
+  } else if (x=="cubic millimeters per minute") {
     return 1.66666666666667e-11
-  } else if (x=="millimeters per second") {
+  } else if (x=="cubic millimeters per second") {
     return 1e-9
   } else if (x=="millions of US gallons per day") {
     return 0.04381263639
-  } else if (x=="nanometers per day") {
+  } else if (x=="cubic nanometers per day") {
     return 1.15740740740741e-32
-  } else if (x=="nanometers per hour") {
+  } else if (x=="cubic nanometers per hour") {
     return 2.77777777777778e-31
-  } else if (x=="nanometers per minute") {
+  } else if (x=="cubic nanometers per minute") {
     return 1.66666666666667e-29
-  } else if (x=="nanometers per second") {
+  } else if (x=="cubic nanometers per second") {
     return 1e-27
   } else if (x=="Orinoco discharges") {
     return 37740
-  } else if (x=="petameters per day") {
+  } else if (x=="cubic petameters per day") {
     return 1.15740740740741e40
-  } else if (x=="petameters per hour") {
+  } else if (x=="cubic petameters per hour") {
     return 2.77777777777778e41
-  } else if (x=="petameters per minute") {
+  } else if (x=="cubic petameters per minute") {
     return 1.66666666666667e43
-  } else if (x=="petameters per second") {
+  } else if (x=="cubic petameters per second") {
     return 1e45
-  } else if (x=="picometers per day") {
+  } else if (x=="cubic picometers per day") {
     return 1.15740740740741e-41
-  } else if (x=="picometers per hour") {
+  } else if (x=="cubic picometers per hour") {
     return 2.77777777777778e-40
-  } else if (x=="picometers per minute") {
+  } else if (x=="cubic picometers per minute") {
     return 1.66666666666667e-38
-  } else if (x=="picometers per second") {
+  } else if (x=="cubic picometers per second") {
     return 1e-36
   } else if (x=="Rio de la Plata discharges") {
     return 27225
@@ -1305,13 +1305,13 @@ function getflowcoefficient(x) {
     return 35943
   } else if (x=="sverdrup") {
     return 1000000
-  } else if (x=="terameters per day") {
+  } else if (x=="cubic terameters per day") {
     return 1.15740740740741e31
-  } else if (x=="terameters per hour") {
+  } else if (x=="cubic terameters per hour") {
     return 2.77777777777778e32
-  } else if (x=="terameters per minute") {
+  } else if (x=="cubic terameters per minute") {
     return 1.66666666666667e34
-  } else if (x=="terameters per second") {
+  } else if (x=="cubic terameters per second") {
     return 1e36
   } else if (x=="US gallons per minute") {
     return 0.0000630901964
@@ -1319,37 +1319,37 @@ function getflowcoefficient(x) {
     return 30146
   } else if (x=="Yenisei discharges") {
     return 19800
-  } else if (x=="yoctometers per day") {
+  } else if (x=="cubic yoctometers per day") {
     return 1.15740740740741e-77
-  } else if (x=="yoctometers per hour") {
+  } else if (x=="cubic yoctometers per hour") {
     return 2.77777777777778e-76
-  } else if (x=="yoctometers per minute") {
+  } else if (x=="cubic yoctometers per minute") {
     return 1.66666666666667e-74
-  } else if (x=="yoctometers per second") {
+  } else if (x=="cubic yoctometers per second") {
     return 1e-72
-  } else if (x=="yottameters per day") {
+  } else if (x=="cubic yottameters per day") {
     return 1.15740740740741e67
-  } else if (x=="yottameters per hour") {
+  } else if (x=="cubic yottameters per hour") {
     return 2.77777777777778e68
-  } else if (x=="yottameters per minute") {
+  } else if (x=="cubic yottameters per minute") {
     return 1.66666666666667e70
-  } else if (x=="yottameters per second") {
+  } else if (x=="cubic yottameters per second") {
     return 1e72
-  } else if (x=="zeptometers per day") {
+  } else if (x=="cubic zeptometers per day") {
     return 1.15740740740741e-68
-  } else if (x=="zeptometers per hour") {
+  } else if (x=="cubic zeptometers per hour") {
     return 2.77777777777778e-67
-  } else if (x=="zeptometers per minute") {
+  } else if (x=="cubic zeptometers per minute") {
     return 1.66666666666667e-65
-  } else if (x=="zeptometers per second") {
+  } else if (x=="cubic zeptometers per second") {
     return 1e-63
-  } else if (x=="zettameters per day") {
+  } else if (x=="cubic zettameters per day") {
     return 1.15740740740741e58
-  } else if (x=="zettameters per hour") {
+  } else if (x=="cubic zettameters per hour") {
     return 2.77777777777778e59
-  } else if (x=="zettameters per minute") {
+  } else if (x=="cubic zettameters per minute") {
     return 1.66666666666667e61
-  } else if (x=="zettameters per second") {
+  } else if (x=="cubic zettameters per second") {
     return 1e63
   } else {
     return NaN
@@ -1362,6 +1362,89 @@ function flowconverter() {
   flownumberoutput = flownumberinput*flowunitinput/flowunitoutput
   if ((document.getElementById("flowunitinput").value !== "") && (document.getElementById("flowunitoutput").value !== "")) {
     document.getElementById("flownumberoutput").innerHTML = format(flownumberoutput)
+  }
+}
+
+
+
+
+// Force starts here
+var forcenumberinput = 1
+var forceunitinput = document.getElementById("forceunitinput")
+var forcenumberoutput = 1
+var forceunitoutput = document.getElementById("forceunitoutput")
+function getforcecoefficient(x) {
+  if (x=="attonewtons") {
+    return 1e-18
+  } else if (x=="centinewtons") {
+    return 0.01
+  } else if (x=="decanewtons") {
+    return 10
+  } else if (x=="decinewtons") {
+    return 0.1
+  } else if (x=="dynes") {
+    return 0.00001
+  } else if (x=="exanewtons") {
+    return 1e18
+  } else if (x=="femtonewtons") {
+    return 1e-15
+  } else if (x=="giganewtons") {
+    return 1e9
+  } else if (x=="hectonewtons") {
+    return 100
+  } else if (x=="kilogram-forces") {
+    return 9.80665
+  } else if (x=="kilonewtons") {
+    return 1000
+  } else if (x=="kip") {
+    return 4448.222
+  } else if (x=="long ton-forces") {
+    return 9964.01641818352
+  } else if (x=="meganewtons") {
+    return 1000000
+  } else if (x=="micronewtons") {
+    return 0.000001
+  } else if (x=="millinewtons") {
+    return 0.001
+  } else if (x=="nanonewtons") {
+    return 1e-9
+  } else if (x=="newtons") {
+    return 1
+  } else if (x=="petanewtons") {
+    return 1e15
+  } else if (x=="piconewtons") {
+    return 1e-12
+  } else if (x=="poundals") {
+    return 0.138255
+  } else if (x=="pound-forces") {
+    return 4.448222
+  } else if (x=="short ton-forces") {
+    return 8896.443230521
+  } else if (x=="sthènes") {
+    return 1000
+  } else if (x=="teranewtons") {
+    return 1e12
+  } else if (x=="ton-forces") {
+    return 9806.65
+  } else if (x=="yoctonewtons") {
+    return 1e-24
+  } else if (x=="yottanewtons") {
+    return 1e24
+  } else if (x=="zeptonewtons") {
+    return 1e-21
+  } else if (x=="zettanewtons") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function forceconverter() {
+  forcenumberinput = document.getElementById("forcenumberinput").value
+  forceunitinput = getforcecoefficient(document.getElementById("forceunitinput").value)
+  forceunitoutput = getforcecoefficient(document.getElementById("forceunitoutput").value)
+  forcenumberoutput = forcenumberinput*forceunitinput/forceunitoutput
+  if ((document.getElementById("forceunitinput").value !== "") && (document.getElementById("forceunitoutput").value !== "")) {
+    document.getElementById("forcenumberoutput").innerHTML = format(forcenumberoutput)
   }
 }
 
