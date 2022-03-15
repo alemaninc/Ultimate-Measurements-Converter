@@ -1451,6 +1451,283 @@ function forceconverter() {
 
 
 
+// Frequency starts here
+var frequencynumberinput = 1
+var frequencyunitinput = document.getElementById("frequencyunitinput")
+var frequencynumberoutput = 1
+var frequencyunitoutput = document.getElementById("frequencyunitoutput")
+function getfrequencycoefficient(x) {
+  if (x=="A#0 note frequencies") {
+    return 29.1352350948806
+  } else if (x=="A#1 note frequencies") {
+    return 58.2704701897613
+  } else if (x=="A#2 note frequencies") {
+    return 116.540940379522
+  } else if (x=="A#3 note frequencies") {
+    return 233.081880759045
+  } else if (x=="A#4 note frequencies") {
+    return 466.16376151809
+  } else if (x=="A#5 note frequencies") {
+    return 932.32752303618
+  } else if (x=="A#6 note frequencies") {
+    return 1864.65504607236
+  } else if (x=="A#7 note frequencies") {
+    return 3729.31009214472
+  } else if (x=="A#8 note frequencies") {
+    return 7458.62018428944
+  } else if (x=="A0 note frequencies") {
+    return 27.5
+  } else if (x=="A1 note frequencies") {
+    return 55
+  } else if (x=="A2 note frequencies") {
+    return 110
+  } else if (x=="A3 note frequencies") {
+    return 220
+  } else if (x=="A4 note frequencies") {
+    return 440
+  } else if (x=="A5 note frequencies") {
+    return 880
+  } else if (x=="A6 note frequencies") {
+    return 1760
+  } else if (x=="A7 note frequencies") {
+    return 3520
+  } else if (x=="A8 note frequencies") {
+    return 7040
+  } else if (x=="attohertz") {
+    return 1e-18
+  } else if (x=="B0 note frequencies") {
+    return 30.8677063285078
+  } else if (x=="B1 note frequencies") {
+    return 61.7354126570155
+  } else if (x=="B2 note frequencies") {
+    return 123.470825314031
+  } else if (x=="B3 note frequencies") {
+    return 246.941650628062
+  } else if (x=="B4 note frequencies") {
+    return 493.883301256124
+  } else if (x=="B5 note frequencies") {
+    return 987.766602512248
+  } else if (x=="B6 note frequencies") {
+    return 1975.5332050245
+  } else if (x=="B7 note frequencies") {
+    return 3951.06641004899
+  } else if (x=="B8 note frequencies") {
+    return 7902.13282009799
+  } else if (x=="C#0 note frequencies") {
+    return 34.647828872109
+  } else if (x=="C#1 note frequencies") {
+    return 69.295657744218
+  } else if (x=="C#2 note frequencies") {
+    return 138.591315488436
+  } else if (x=="C#3 note frequencies") {
+    return 277.182630976872
+  } else if (x=="C#4 note frequencies") {
+    return 554.365261953744
+  } else if (x=="C#5 note frequencies") {
+    return 1108.73052390749
+  } else if (x=="C#6 note frequencies") {
+    return 2217.46104781498
+  } else if (x=="C#7 note frequencies") {
+    return 4434.92209562995
+  } else if (x=="C0 note frequencies") {
+    return 32.7031956625748
+  } else if (x=="C1 note frequencies") {
+    return 65.4063913251497
+  } else if (x=="C2 note frequencies") {
+    return 130.812782650299
+  } else if (x=="C3 note frequencies") {
+    return 261.625565300599
+  } else if (x=="C4 note frequencies") {
+    return 523.251130601197
+  } else if (x=="C5 note frequencies") {
+    return 1046.50226120239
+  } else if (x=="C6 note frequencies") {
+    return 2093.00452240479
+  } else if (x=="C7 note frequencies") {
+    return 4186.00904480958
+  } else if (x=="centihertz") {
+    return 0.01
+  } else if (x=="cyan light frequencies") {
+    return 5.45e14
+  } else if (x=="D#0 note frequencies") {
+    return 38.8908729652601
+  } else if (x=="D#1 note frequencies") {
+    return 77.7817459305202
+  } else if (x=="D#2 note frequencies") {
+    return 155.56349186104
+  } else if (x=="D#3 note frequencies") {
+    return 311.126983722081
+  } else if (x=="D#4 note frequencies") {
+    return 622.253967444162
+  } else if (x=="D#5 note frequencies") {
+    return 1244.50793488832
+  } else if (x=="D#6 note frequencies") {
+    return 2489.01586977665
+  } else if (x=="D#7 note frequencies") {
+    return 4978.03173955329
+  } else if (x=="D0 note frequencies") {
+    return 36.7080959896759
+  } else if (x=="D1 note frequencies") {
+    return 73.4161919793519
+  } else if (x=="D2 note frequencies") {
+    return 146.832383958704
+  } else if (x=="D3 note frequencies") {
+    return 293.664767917408
+  } else if (x=="D4 note frequencies") {
+    return 587.329535834815
+  } else if (x=="D5 note frequencies") {
+    return 1174.65907166963
+  } else if (x=="D6 note frequencies") {
+    return 2349.31814333926
+  } else if (x=="D7 note frequencies") {
+    return 4698.63628667852
+  } else if (x=="decahertz") {
+    return 10
+  } else if (x=="decihertz") {
+    return 0.1
+  } else if (x=="E0 note frequencies") {
+    return 41.2034446141088
+  } else if (x=="E1 note frequencies") {
+    return 82.4068892282175
+  } else if (x=="E2 note frequencies") {
+    return 164.813778456435
+  } else if (x=="E3 note frequencies") {
+    return 329.62755691287
+  } else if (x=="E4 note frequencies") {
+    return 659.25511382574
+  } else if (x=="E5 note frequencies") {
+    return 1318.51022765148
+  } else if (x=="E6 note frequencies") {
+    return 2637.02045530296
+  } else if (x=="E7 note frequencies") {
+    return 5274.04091060592
+  } else if (x=="exahertz") {
+    return 1e18
+  } else if (x=="F#0 note frequencies") {
+    return 46.2493028389543
+  } else if (x=="F#1 note frequencies") {
+    return 92.4986056779086
+  } else if (x=="F#2 note frequencies") {
+    return 184.997211355817
+  } else if (x=="F#3 note frequencies") {
+    return 369.994422711634
+  } else if (x=="F#4 note frequencies") {
+    return 739.988845423269
+  } else if (x=="F#5 note frequencies") {
+    return 1479.97769084654
+  } else if (x=="F#6 note frequencies") {
+    return 2959.95538169308
+  } else if (x=="F#7 note frequencies") {
+    return 5919.91076338615
+  } else if (x=="F0 note frequencies") {
+    return 43.6535289291255
+  } else if (x=="F1 note frequencies") {
+    return 87.307057858251
+  } else if (x=="F2 note frequencies") {
+    return 174.614115716502
+  } else if (x=="F3 note frequencies") {
+    return 349.228231433004
+  } else if (x=="F4 note frequencies") {
+    return 698.456462866008
+  } else if (x=="F5 note frequencies") {
+    return 1396.91292573202
+  } else if (x=="F6 note frequencies") {
+    return 2793.82585146403
+  } else if (x=="F7 note frequencies") {
+    return 5587.65170292806
+  } else if (x=="femtohertz") {
+    return 1e-15
+  } else if (x=="G#0 note frequencies") {
+    return 51.9130871974931
+  } else if (x=="G#1 note frequencies") {
+    return 103.826174394986
+  } else if (x=="G#2 note frequencies") {
+    return 207.652348789973
+  } else if (x=="G#3 note frequencies") {
+    return 415.304697579945
+  } else if (x=="G#4 note frequencies") {
+    return 830.60939515989
+  } else if (x=="G#5 note frequencies") {
+    return 1661.21879031978
+  } else if (x=="G#6 note frequencies") {
+    return 3322.43758063956
+  } else if (x=="G#7 note frequencies") {
+    return 6644.87516127912
+  } else if (x=="G0 note frequencies") {
+    return 48.9994294977187
+  } else if (x=="G1 note frequencies") {
+    return 97.9988589954373
+  } else if (x=="G2 note frequencies") {
+    return 195.997717990875
+  } else if (x=="G3 note frequencies") {
+    return 391.995435981749
+  } else if (x=="G4 note frequencies") {
+    return 783.990871963499
+  } else if (x=="G5 note frequencies") {
+    return 1567.981743927
+  } else if (x=="G6 note frequencies") {
+    return 3135.96348785399
+  } else if (x=="G7 note frequencies") {
+    return 6271.92697570798
+  } else if (x=="gigahertz") {
+    return 1e9
+  } else if (x=="green light frequencies") {
+    return 5.16e14
+  } else if (x=="hectohertz") {
+    return 100
+  } else if (x=="hertz") {
+    return 1
+  } else if (x=="indigo light frequencies") {
+    return 5.99e14
+  } else if (x=="kilohertz") {
+    return 1000
+  } else if (x=="megahertz") {
+    return 1000000
+  } else if (x=="microhertz") {
+    return 0.000001
+  } else if (x=="millihertz") {
+    return 0.001
+  } else if (x=="nanohertz") {
+    return 1e-9
+  } else if (x=="orange light frequencies") {
+    return 4.62e14
+  } else if (x=="petahertz") {
+    return 1e15
+  } else if (x=="picohertz") {
+    return 1e-12
+  } else if (x=="red light frequencies") {
+    return 4.29e14
+  } else if (x=="terahertz") {
+    return 1e12
+  } else if (x=="violet light frequencies") {
+    return 6.66e14
+  } else if (x=="yellow light frequencies") {
+    return 5e14
+  } else if (x=="yoctohertz") {
+    return 1e-24
+  } else if (x=="yottahertz") {
+    return 1e24
+  } else if (x=="zeptohertz") {
+    return 1e-21
+  } else if (x=="zettahertz") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function frequencyconverter() {
+  frequencynumberinput = document.getElementById("frequencynumberinput").value
+  frequencyunitinput = getfrequencycoefficient(document.getElementById("frequencyunitinput").value)
+  frequencyunitoutput = getfrequencycoefficient(document.getElementById("frequencyunitoutput").value)
+  frequencynumberoutput = frequencynumberinput*frequencyunitinput/frequencyunitoutput
+  if ((document.getElementById("frequencyunitinput").value !== "") && (document.getElementById("frequencyunitoutput").value !== "")) {
+    document.getElementById("frequencynumberoutput").innerHTML = format(frequencynumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
@@ -1713,6 +1990,8 @@ function loop() {
   energyconverter()
   equivalentdoseconverter()
   flowconverter()
+  forceconverter()
+  frequencyconverter()
   lengthconverter()
   timeconverter()
 }
