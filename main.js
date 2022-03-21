@@ -1700,6 +1700,103 @@ function illuminanceconverter() {
 
 
 
+// Information starts here
+var informationnumberinput = 1
+var informationunitinput = document.getElementById("informationunitinput")
+var informationnumberoutput = 1
+var informationunitoutput = document.getElementById("informationunitoutput")
+function getinformationcoefficient(x) {
+  if (x=="bits") {
+    return 1
+  } else if (x=="bytes") {
+    return 8
+  } else if (x=="crumbs") {
+    return 2
+  } else if (x=="exabits") {
+    return 1e18
+  } else if (x=="exabytes") {
+    return 8e18
+  } else if (x=="exbibits") {
+    return 1.15292150460685e18
+  } else if (x=="exbibytes") {
+    return 9.22337203685478e18
+  } else if (x=="gibibits") {
+    return 1.073741824e9
+  } else if (x=="gibibytes") {
+    return 8.589934592e9
+  } else if (x=="gigabits") {
+    return 1e9
+  } else if (x=="gigabytes") {
+    return 8e9
+  } else if (x=="kibibits") {
+    return 1024
+  } else if (x=="kibibytes") {
+    return 8192
+  } else if (x=="kilobits") {
+    return 1000
+  } else if (x=="kilobytes") {
+    return 8000
+  } else if (x=="mebibits") {
+    return 1.048576e6
+  } else if (x=="mebibytes") {
+    return 8.388608e6
+  } else if (x=="megabits") {
+    return 1000000
+  } else if (x=="megabytes") {
+    return 8e6
+  } else if (x=="nibbles") {
+    return 4
+  } else if (x=="pebibits") {
+    return 1.12589990684262e15
+  } else if (x=="pebibytes") {
+    return 9.00719925474099e15
+  } else if (x=="petabits") {
+    return 1e15
+  } else if (x=="petabytes") {
+    return 8e15
+  } else if (x=="tebibits") {
+    return 1.099511627776e12
+  } else if (x=="tebibytes") {
+    return 8.796093022208e12
+  } else if (x=="terabits") {
+    return 1e12
+  } else if (x=="terabytes") {
+    return 8e12
+  } else if (x=="trits") {
+    return 1.58496250072116
+  } else if (x=="yobibits") {
+    return 1.20892581961463e24
+  } else if (x=="yobibytes") {
+    return 9.67140655691703e24
+  } else if (x=="yottabits") {
+    return 1e24
+  } else if (x=="yottabytes") {
+    return 8e24
+  } else if (x=="zebibits") {
+    return 1.18059162071741e21
+  } else if (x=="zebibytes") {
+    return 9.44473296573929e21
+  } else if (x=="zettabits") {
+    return 1e21
+  } else if (x=="zettabytes") {
+    return 8e21
+  } else {
+    return NaN
+  }
+}
+function informationconverter() {
+  informationnumberinput = document.getElementById("informationnumberinput").value
+  informationunitinput = getinformationcoefficient(document.getElementById("informationunitinput").value)
+  informationunitoutput = getinformationcoefficient(document.getElementById("informationunitoutput").value)
+  informationnumberoutput = informationnumberinput*informationunitinput/informationunitoutput
+  if ((document.getElementById("informationunitinput").value !== "") && (document.getElementById("informationunitoutput").value !== "")) {
+    document.getElementById("informationnumberoutput").innerHTML = format(informationnumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
@@ -1967,5 +2064,6 @@ function loop() {
   illuminanceconverter()
   lengthconverter()
   timeconverter()
+  informationconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
