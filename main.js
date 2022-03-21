@@ -263,57 +263,6 @@ function accelerationconverter() {
 
 
 
-// Angle starts here
-var anglenumberinput = 1
-var angleunitinput = document.getElementById("angleunitinput")
-var anglenumberoutput = 1
-var angleunitoutput = document.getElementById("angleunitoutput")
-function getanglecoefficient(x) {
-  if (x=="arcminutes") {
-    return 0.0000462962963
-  } else if (x=="arcseconds") {
-    return 0.0000007716049383
-  } else if (x=="binary degrees") {
-    return 0.00390625
-  } else if (x=="degrees") {
-    return 0.002777777777778
-  } else if (x=="diameter parts") {
-    return 0.00530516477
-  } else if (x=="gradians") {
-    return 0.0025
-  } else if (x=="hour angles") {
-    return 0.041666666666667
-  } else if (x=="milliradians") {
-    return 0.0001591549431
-  } else if (x=="points") {
-    return 0.03125
-  } else if (x=="quadrants") {
-    return 0.25
-  } else if (x=="quarter-points") {
-    return 0.0078125
-  } else if (x=="radians") {
-    return 0.1591549431
-  } else if (x=="sextants") {
-    return 0.16666666666667
-  } else if (x=="turns") {
-    return 1
-  } else {
-    return NaN
-  }
-}
-function angleconverter() {
-  anglenumberinput = document.getElementById("anglenumberinput").value
-  angleunitinput = getanglecoefficient(document.getElementById("angleunitinput").value)
-  angleunitoutput = getanglecoefficient(document.getElementById("angleunitoutput").value)
-  anglenumberoutput = anglenumberinput*angleunitinput/angleunitoutput
-  if ((document.getElementById("angleunitinput").value !== "") && (document.getElementById("angleunitoutput").value !== "")) {
-    document.getElementById("anglenumberoutput").innerHTML = format(anglenumberoutput)
-  }
-}
-
-
-
-
 // Area starts here
 var areanumberinput = 1
 var areaunitinput = document.getElementById("areaunitinput")
@@ -1728,6 +1677,29 @@ function frequencyconverter() {
 
 
 
+// Illuminance starts here
+var illuminancenumberinput = 1
+var illuminanceunitinput = document.getElementById("illuminanceunitinput")
+var illuminancenumberoutput = 1
+var illuminanceunitoutput = document.getElementById("illuminanceunitoutput")
+function getilluminancecoefficient(x) {
+  } else {
+    return NaN
+  }
+}
+function illuminanceconverter() {
+  illuminancenumberinput = document.getElementById("illuminancenumberinput").value
+  illuminanceunitinput = getilluminancecoefficient(document.getElementById("illuminanceunitinput").value)
+  illuminanceunitoutput = getilluminancecoefficient(document.getElementById("illuminanceunitoutput").value)
+  illuminancenumberoutput = illuminancenumberinput*illuminanceunitinput/illuminanceunitoutput
+  if ((document.getElementById("illuminanceunitinput").value !== "") && (document.getElementById("illuminanceunitoutput").value !== "")) {
+    document.getElementById("illuminancenumberoutput").innerHTML = format(illuminancenumberoutput)
+  }
+}
+
+
+
+
 // Length starts here
 var lengthnumberinput = 1
 var lengthunitinput = document.getElementById("lengthunitinput")
@@ -1992,6 +1964,7 @@ function loop() {
   flowconverter()
   forceconverter()
   frequencyconverter()
+  illuminanceconverter()
   lengthconverter()
   timeconverter()
 }
