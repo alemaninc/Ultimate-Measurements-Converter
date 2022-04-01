@@ -1914,6 +1914,91 @@ function lengthconverter() {
 
 
 
+// Luminous flux starts here
+var luminousfluxnumberinput = 1
+var luminousfluxunitinput = document.getElementById("luminousfluxunitinput")
+var luminousfluxnumberoutput = 1
+var luminousfluxunitoutput = document.getElementById("luminousfluxunitoutput")
+function getluminousfluxcoefficient(x) {
+  if (x=="attolumens") {
+    return 1e-18
+  } else if (x=="centilumens") {
+    return 0.01
+  } else if (x=="decalumens") {
+    return 10
+  } else if (x=="decilumens") {
+    return 0.1
+  } else if (x=="exalumens") {
+    return 1e18
+  } else if (x=="femtolumens") {
+    return 1e-15
+  } else if (x=="gigalumens") {
+    return 1e9
+  } else if (x=="hectalumens") {
+    return 100
+  } else if (x=="kilolumens") {
+    return 1000
+  } else if (x=="lumens") {
+    return 1
+  } else if (x=="megalumens") {
+    return 1000000
+  } else if (x=="microlumens") {
+    return 0.000001
+  } else if (x=="millilumens") {
+    return 0.001
+  } else if (x=="nanolumens") {
+    return 1e-9
+  } else if (x=="newly manufactured 100 W fluorescent lamps (approximate)") {
+    return 8000
+  } else if (x=="newly manufactured 100 W incandescent lamps (approximate)") {
+    return 1750
+  } else if (x=="newly manufactured 127 W low pressure sodium vapor lamps (approximate)") {
+    return 25000
+  } else if (x=="newly manufactured 15mW green lasers (approximate)") {
+    return 8.4
+  } else if (x=="newly manufactured 18 W fluorescent lamps (approximate)") {
+    return 1250
+  } else if (x=="newly manufactured 40 W fluorescent lamps (approximate)") {
+    return 2800
+  } else if (x=="newly manufactured 400 W metal-halide lamps (approximate)") {
+    return 40000
+  } else if (x=="newly manufactured 6 W COB filament LED lamps (approximate)") {
+    return 600
+  } else if (x=="newly manufactured 7 W high-output white LED's (approximate)") {
+    return 450
+  } else if (x=="newly manufactured kerosene lanterns (approximate)") {
+    return 100
+  } else if (x=="petalumens") {
+    return 1e15
+  } else if (x=="picolumens") {
+    return 1e-12
+  } else if (x=="teralumens") {
+    return 1e12
+  } else if (x=="yoctolumens") {
+    return 1e-24
+  } else if (x=="yottalumens") {
+    return 1e24
+  } else if (x=="zeptolumens") {
+    return 1e-21
+  } else if (x=="zettalumens") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function luminousfluxconverter() {
+  luminousfluxnumberinput = document.getElementById("luminousfluxnumberinput").value
+  luminousfluxunitinput = getluminousfluxcoefficient(document.getElementById("luminousfluxunitinput").value)
+  luminousfluxunitoutput = getluminousfluxcoefficient(document.getElementById("luminousfluxunitoutput").value)
+  luminousfluxnumberoutput = luminousfluxnumberinput*luminousfluxunitinput/luminousfluxunitoutput
+  if ((document.getElementById("luminousfluxunitinput").value !== "") && (document.getElementById("luminousfluxunitoutput").value !== "")) {
+    document.getElementById("luminousfluxnumberoutput").innerHTML = format(luminousfluxnumberoutput)
+  }
+}
+
+
+
+
 // Time starts here
 var timenumberinput = 1
 var timeunitinput = document.getElementById("lengthunitinput")
@@ -2063,6 +2148,7 @@ function loop() {
   frequencyconverter()
   illuminanceconverter()
   lengthconverter()
+  luminousfluxconverter()
   timeconverter()
   informationconverter()
 }
