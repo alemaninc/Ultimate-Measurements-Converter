@@ -1999,6 +1999,77 @@ function luminousfluxconverter() {
 
 
 
+
+
+// Luminous intensity starts here
+var luminousintensitynumberinput = 1
+var luminousintensityunitinput = document.getElementById("luminousintensityunitinput")
+var luminousintensitynumberoutput = 1
+var luminousintensityunitoutput = document.getElementById("luminousintensityunitoutput")
+function getluminousintensitycoefficient(x) {
+  if (x=="attocandela") {
+    return 1e-18
+  } else if (x=="candela") {
+    return 1
+  } else if (x=="candlepower") {
+    return 1.02
+  } else if (x=="centicandela") {
+    return 0.01
+  } else if (x=="decacandela") {
+    return 10
+  } else if (x=="decicandela") {
+    return 0.1
+  } else if (x=="exacandela") {
+    return 1e18
+  } else if (x=="femtocandela") {
+    return 1e-15
+  } else if (x=="gigacandela") {
+    return 1e9
+  } else if (x=="hectacandela") {
+    return 100
+  } else if (x=="Hefnerkerze") {
+    return 0.92
+  } else if (x=="kilocandela") {
+    return 1000
+  } else if (x=="megacandela") {
+    return 1000000
+  } else if (x=="microcandela") {
+    return 0.000001
+  } else if (x=="millicandela") {
+    return 0.001
+  } else if (x=="nanocandela") {
+    return 1e-9
+  } else if (x=="petacandela") {
+    return 1e15
+  } else if (x=="picocandela") {
+    return 1e-12
+  } else if (x=="teracandela") {
+    return 1e12
+  } else if (x=="yoctocandela") {
+    return 1e-24
+  } else if (x=="yottacandela") {
+    return 1e24
+  } else if (x=="zeptocandela") {
+    return 1e-21
+  } else if (x=="zettacandela") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function luminousintensityconverter() {
+  luminousintensitynumberinput = document.getElementById("luminousintensitynumberinput").value
+  luminousintensityunitinput = getluminousintensitycoefficient(document.getElementById("luminousintensityunitinput").value)
+  luminousintensityunitoutput = getluminousintensitycoefficient(document.getElementById("luminousintensityunitoutput").value)
+  luminousintensitynumberoutput = luminousintensitynumberinput*luminousintensityunitinput/luminousintensityunitoutput
+  if ((document.getElementById("luminousintensityunitinput").value !== "") && (document.getElementById("luminousintensityunitoutput").value !== "")) {
+    document.getElementById("luminousintensitynumberoutput").innerHTML = format(luminousintensitynumberoutput)
+  }
+}
+
+
+
+
 // Time starts here
 var timenumberinput = 1
 var timeunitinput = document.getElementById("lengthunitinput")
@@ -2147,9 +2218,10 @@ function loop() {
   forceconverter()
   frequencyconverter()
   illuminanceconverter()
+  informationconverter()
   lengthconverter()
   luminousfluxconverter()
+  luminousintensityconverter()
   timeconverter()
-  informationconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
