@@ -1999,8 +1999,6 @@ function luminousfluxconverter() {
 
 
 
-
-
 // Luminous intensity starts here
 var luminousintensitynumberinput = 1
 var luminousintensityunitinput = document.getElementById("luminousintensityunitinput")
@@ -2064,6 +2062,79 @@ function luminousintensityconverter() {
   luminousintensitynumberoutput = luminousintensitynumberinput*luminousintensityunitinput/luminousintensityunitoutput
   if ((document.getElementById("luminousintensityunitinput").value !== "") && (document.getElementById("luminousintensityunitoutput").value !== "")) {
     document.getElementById("luminousintensitynumberoutput").innerHTML = format(luminousintensitynumberoutput)
+  }
+}
+
+
+
+
+// Magnetic flux starts here
+var magneticfluxnumberinput = 1
+var magneticfluxunitinput = document.getElementById("magneticfluxunitinput")
+var magneticfluxnumberoutput = 1
+var magneticfluxunitoutput = document.getElementById("magneticfluxunitoutput")
+function getmagneticfluxcoefficient(x) {
+  if (x=="attoweber") {
+    return 1e-18
+  } else if (x=="centiweber") {
+    return 0.01
+  } else if (x=="decaweber") {
+    return 10
+  } else if (x=="deciweber") {
+    return 0.1
+  } else if (x=="exaweber") {
+    return 1e18
+  } else if (x=="femtoweber") {
+    return 1e-15
+  } else if (x=="gigaweber") {
+    return 1e9
+  } else if (x=="hectaweber") {
+    return 100
+  } else if (x=="kilolines") {
+    return 0.00001
+  } else if (x=="kiloweber") {
+    return 1000
+  } else if (x=="lines") {
+    return 1e-8
+  } else if (x=="maxwell") {
+    return 1e-8
+  } else if (x=="megalines") {
+    return 0.01
+  } else if (x=="megaweber") {
+    return 1000000
+  } else if (x=="microweber") {
+    return 0.000001
+  } else if (x=="milliweber") {
+    return 0.001
+  } else if (x=="nanoweber") {
+    return 1e-9
+  } else if (x=="petaweber") {
+    return 1e15
+  } else if (x=="picoweber") {
+    return 1e-12
+  } else if (x=="teraweber") {
+    return 1e12
+  } else if (x=="weber") {
+    return 1
+  } else if (x=="yoctoweber") {
+    return 1e-24
+  } else if (x=="yottaweber") {
+    return 1e24
+  } else if (x=="zeptoweber") {
+    return 1e-21
+  } else if (x=="zettaweber") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function magneticfluxconverter() {
+  magneticfluxnumberinput = document.getElementById("magneticfluxnumberinput").value
+  magneticfluxunitinput = getmagneticfluxcoefficient(document.getElementById("magneticfluxunitinput").value)
+  magneticfluxunitoutput = getmagneticfluxcoefficient(document.getElementById("magneticfluxunitoutput").value)
+  magneticfluxnumberoutput = magneticfluxnumberinput*magneticfluxunitinput/magneticfluxunitoutput
+  if ((document.getElementById("magneticfluxunitinput").value !== "") && (document.getElementById("magneticfluxunitoutput").value !== "")) {
+    document.getElementById("magneticfluxnumberoutput").innerHTML = format(magneticfluxnumberoutput)
   }
 }
 
