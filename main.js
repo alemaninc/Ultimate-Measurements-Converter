@@ -263,6 +263,59 @@ function accelerationconverter() {
 
 
 
+// Angle starts here
+var anglenumberinput = 1
+var angleunitinput = document.getElementById("angleunitinput")
+var anglenumberoutput = 1
+var angleunitoutput = document.getElementById("angleunitoutput")
+function getanglecoefficient(x) {
+  if (x=="arcminutes") {
+    return 1/21600
+  } else if (x=="arcseconds") {
+    return 1/1296000
+  } else if (x=="binary degrees") {
+    return 0.00390625
+  } else if (x=="compass points") {
+    return 0.03125
+  } else if (x=="degrees") {
+    return 1/360
+  } else if (x=="diameter parts") {
+    return 1/(Math.PI*120)
+  } else if (x=="hexacontades") {
+    return 1/60
+  } else if (x=="gradians") {
+    return 0.0025
+  } else if (x=="hour angles") {
+    return 1/24
+  } else if (x=="milliradians") {
+    return 0.0005/Math.PI
+  } else if (x=="quadrants") {
+    return 0.25
+  } else if (x=="quarter-points") {
+    return 0.0078125
+  } else if (x=="radians") {
+    return 0.5/Math.PI
+  } else if (x=="sextants") {
+    return 1/6
+  } else if (x=="turns") {
+    return 1
+  } else {
+    return NaN
+  }
+}
+function angleconverter() {
+  anglenumberinput = document.getElementById("anglenumberinput").value
+  angleunitinput = getanglecoefficient(document.getElementById("angleunitinput").value)
+  angleunitoutput = getanglecoefficient(document.getElementById("angleunitoutput").value)
+  anglenumberoutput = anglenumberinput*angleunitinput/angleunitoutput
+  if ((document.getElementById("angleunitinput").value !== "") && (document.getElementById("angleunitoutput").value !== "")) {
+    document.getElementById("anglenumberoutput").innerHTML = format(anglenumberoutput)
+  }
+}
+
+
+
+
 // Area starts here
 var areanumberinput = 1
 var areaunitinput = document.getElementById("areaunitinput")
@@ -2141,6 +2194,143 @@ function magneticfluxconverter() {
 
 
 
+// Mass starts here
+var massnumberinput = 1
+var massunitinput = document.getElementById("massunitinput")
+var massnumberoutput = 1
+var massunitoutput = document.getElementById("massunitoutput")
+function getmasscoefficient(x) {
+  if (x=="attograms") {
+    return 1e-18
+  } else if (x=="avoirdupois (regular) ounces") {
+    return 28.34952
+  } else if (x=="avoirdupois pounds") {
+    return 453.59237
+  } else if (x=="centigrams") {
+    return 0.01
+  } else if (x=="daltons") {
+    return 1.6605390666e-30
+  } else if (x=="decagrams") {
+    return 10
+  } else if (x=="decigrams") {
+    return 0.1
+  } else if (x=="Earth masses") {
+    return 5.9722e27
+  } else if (x=="eighths") {
+    return 3.54369
+  } else if (x=="electronvolts") {
+    return 1.782662e-39
+  } else if (x=="exagrams") {
+    return 1e18
+  } else if (x=="femtograms") {
+    return 1e-15
+  } else if (x=="gigagrams") {
+    return 1e9
+  } else if (x=="grains") {
+    return 0.06479891
+  } else if (x=="grams") {
+    return 1
+  } else if (x=="hectograms") {
+    return 100
+  } else if (x=="Jovian masses") {
+    return 1.89813e30
+  } else if (x=="kilograms") {
+    return 1000
+  } else if (x=="Lunar masses") {
+    return 7.34767309e25
+  } else if (x=="Martian masses") {
+    return 6.39e26
+  } else if (x=="megagrams") {
+    return 1000000
+  } else if (x=="Mercurian masses") {
+    return 3.285e26
+  } else if (x=="metric exatons") {
+    return 1e24
+  } else if (x=="metric gigatons") {
+    return 1e15
+  } else if (x=="metric kilotons") {
+    return 1e9
+  } else if (x=="metric megatons") {
+    return 1e12
+  } else if (x=="metric petatons") {
+    return 1e21
+  } else if (x=="metric teratons") {
+    return 1e18
+  } else if (x=="metric tons") {
+    return 1000000
+  } else if (x=="metric yottatons") {
+    return 1e30
+  } else if (x=="metric zettatons") {
+    return 1e27
+  } else if (x=="micrograms") {
+    return 0.000001
+  } else if (x=="milligrams") {
+    return 0.001
+  } else if (x=="nanograms") {
+    return 1e-9
+  } else if (x=="Neptunian masses") {
+    return 1.024e29
+  } else if (x=="pennyweights") {
+    return 1.55517384
+  } else if (x=="petagrams") {
+    return 1e15
+  } else if (x=="picograms") {
+    return 1e-12
+  } else if (x=="planck masses") {
+    return 0.00002176434
+  } else if (x=="Plutonian masses") {
+    return 1.309e25
+  } else if (x=="Sagittarius A masses") {
+    return 8.1549e39
+  } else if (x=="Saturnian masses") {
+    return 5.683e29
+  } else if (x=="slugs") {
+    return 14593.88091238
+  } else if (x=="solar masses") {
+    return 1.989e33
+  } else if (x=="stone") {
+    return 6350.29318
+  } else if (x=="teragrams") {
+    return 1e12
+  } else if (x=="troy ounces") {
+    return 31.1034768
+  } else if (x=="troy pounds") {
+    return 373.2417216
+  } else if (x=="UK (long) tons") {
+    return 1.0160469088e6
+  } else if (x=="universe masses") {
+    return 1.5e56
+  } else if (x=="Uranian masses") {
+    return 8.681e28
+  } else if (x=="US (short) tons") {
+    return 907184.74
+  } else if (x=="Venusian (cytherean) masses") {
+    return 4.867e27
+  } else if (x=="yoctograms") {
+    return 1e-24
+  } else if (x=="yottagrams") {
+    return 1e24
+  } else if (x=="zeptograms") {
+    return 1e-21
+  } else if (x=="zettagrams") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function massconverter() {
+  massnumberinput = document.getElementById("massnumberinput").value
+  massunitinput = getmasscoefficient(document.getElementById("massunitinput").value)
+  massunitoutput = getmasscoefficient(document.getElementById("massunitoutput").value)
+  massnumberoutput = massnumberinput*massunitinput/massunitoutput
+  if ((document.getElementById("massunitinput").value !== "") && (document.getElementById("massunitoutput").value !== "")) {
+    document.getElementById("massnumberoutput").innerHTML = format(massnumberoutput)
+  }
+}
+
+
+
+
 // Time starts here
 var timenumberinput = 1
 var timeunitinput = document.getElementById("lengthunitinput")
@@ -2293,6 +2483,8 @@ function loop() {
   lengthconverter()
   luminousfluxconverter()
   luminousintensityconverter()
+  magneticfluxconverter()
+  massconverter()
   timeconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
