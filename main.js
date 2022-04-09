@@ -1735,7 +1735,53 @@ var illuminancenumberinput = 1
 var illuminanceunitinput = document.getElementById("illuminanceunitinput")
 var illuminancenumberoutput = 1
 var illuminanceunitoutput = document.getElementById("illuminanceunitoutput")
-function getilluminancecoefficient(x) {
+function getilluminancecoefficient() {
+  if (x=="attolux") {
+    return 1e-18
+  } else if (x=="centilux") {
+    return 0.01
+  } else if (x=="decalux") {
+    return 10
+  } else if (x=="decilux") {
+    return 0.1
+  } else if (x=="exalux") {
+    return 1e18
+  } else if (x=="femtolux") {
+    return 1e-15
+  } else if (x=="foot-candles") {
+    return 10.7639
+  } else if (x=="gigalux") {
+    return 1e9
+  } else if (x=="hectolux") {
+    return 100
+  } else if (x=="kilolux") {
+    return 1000
+  } else if (x=="lux") {
+    return 1
+  } else if (x=="megalux") {
+    return 1000000
+  } else if (x=="microlux") {
+    return 0.000001
+  } else if (x=="millilux") {
+    return 0.001
+  } else if (x=="nanolux") {
+    return 1e-9
+  } else if (x=="petalux") {
+    return 1e15
+  } else if (x=="phots") {
+    return 10000
+  } else if (x=="picolux") {
+    return 1e-12
+  } else if (x=="teralux") {
+    return 1e12
+  } else if (x=="yoctolux") {
+    return 1e-24
+  } else if (x=="yottalux") {
+    return 1e24
+  } else if (x=="zeptolux") {
+    return 1e-21
+  } else if (x=="zettalux") {
+    return 1e21
   } else {
     return NaN
   }
