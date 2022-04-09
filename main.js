@@ -1735,7 +1735,7 @@ var illuminancenumberinput = 1
 var illuminanceunitinput = document.getElementById("illuminanceunitinput")
 var illuminancenumberoutput = 1
 var illuminanceunitoutput = document.getElementById("illuminanceunitoutput")
-function getilluminancecoefficient() {
+function getilluminancecoefficient(x) {
   if (x=="attolux") {
     return 1e-18
   } else if (x=="centilux") {
