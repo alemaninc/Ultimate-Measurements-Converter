@@ -2377,6 +2377,97 @@ function massconverter() {
 
 
 
+// Power starts here
+var powernumberinput = 1
+var powerunitinput = document.getElementById("powerunitinput")
+var powernumberoutput = 1
+var powerunitoutput = document.getElementById("powerunitoutput")
+function getpowercoefficient(x) {
+  if (x=="attowatts") {
+    return 1e-18
+  } else if (x=="boiler horsepower") {
+    return 9810.657
+  } else if (x=="british thermal units per hour") {
+    return 0.293071070172222
+  } else if (x=="british thermal units per minute") {
+    return 17.5842642103333
+  } else if (x=="british thermal units per second") {
+    return 1055.05585262
+  } else if (x=="calories per second") {
+    return 4.1868
+  } else if (x=="centiwatts") {
+    return 0.01
+  } else if (x=="decawatts") {
+    return 10
+  } else if (x=="deciwatts") {
+    return 0.1
+  } else if (x=="electrical horsepower") {
+    return 746
+  } else if (x=="exawatts") {
+    return 1e18
+  } else if (x=="femtowatts") {
+    return 1e-15
+  } else if (x=="foot-pound forces per hour") {
+    return 0.000376616096758722
+  } else if (x=="foot-pound forces per minute") {
+    return 0.0225969658055233
+  } else if (x=="foot-pound forces per second") {
+    return 1.3558179483314
+  } else if (x=="gigawatts") {
+    return 1e9
+  } else if (x=="hectowatts") {
+    return 100
+  } else if (x=="kilowatts") {
+    return 1000
+  } else if (x=="mechanical horsepower") {
+    return 745.69987158227
+  } else if (x=="megawatts") {
+    return 1000000
+  } else if (x=="metric horsepower") {
+    return 735.49875
+  } else if (x=="microwatts") {
+    return 0.000001
+  } else if (x=="milliwatts") {
+    return 0.001
+  } else if (x=="nanowatts") {
+    return 1e-9
+  } else if (x=="petawatts") {
+    return 1e15
+  } else if (x=="picowatts") {
+    return 1e-12
+  } else if (x=="poncelets") {
+    return 980.665
+  } else if (x=="terawatts") {
+    return 1e12
+  } else if (x=="tons of air conditioning") {
+    return 3516.85284206667
+  } else if (x=="watts") {
+    return 1
+  } else if (x=="yoctowatts") {
+    return 1e-24
+  } else if (x=="yottawatts") {
+    return 1e24
+  } else if (x=="zeptowatts") {
+    return 1e-21
+  } else if (x=="zettawatts") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function powerconverter() {
+  powernumberinput = document.getElementById("powernumberinput").value
+  powerunitinput = getpowercoefficient(document.getElementById("powerunitinput").value)
+  powerunitoutput = getpowercoefficient(document.getElementById("powerunitoutput").value)
+  powernumberoutput = powernumberinput*powerunitinput/powerunitoutput
+  if ((document.getElementById("powerunitinput").value !== "") && (document.getElementById("powerunitoutput").value !== "")) {
+    document.getElementById("powernumberoutput").innerHTML = format(powernumberoutput)
+  }
+}
+
+
+
+
 // Time starts here
 var timenumberinput = 1
 var timeunitinput = document.getElementById("lengthunitinput")
@@ -2531,6 +2622,7 @@ function loop() {
   luminousintensityconverter()
   magneticfluxconverter()
   massconverter()
+  powerconverter()
   timeconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
