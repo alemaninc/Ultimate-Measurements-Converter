@@ -2468,6 +2468,89 @@ function powerconverter() {
 
 
 
+// Pressure starts here
+var pressurenumberinput = 1
+var pressureunitinput = document.getElementById("pressureunitinput")
+var pressurenumberoutput = 1
+var pressureunitoutput = document.getElementById("pressureunitoutput")
+function getpressurecoefficient(x) {
+  if (x=="attopascals") {
+    return 1e-18
+  } else if (x=="bars") {
+    return 100000
+  } else if (x=="baryes") {
+    return 0.1
+  } else if (x=="centipascals") {
+    return 0.01
+  } else if (x=="decapascals") {
+    return 10
+  } else if (x=="decipascals") {
+    return 0.1
+  } else if (x=="exapascals") {
+    return 1e18
+  } else if (x=="femtopascals") {
+    return 1e-15
+  } else if (x=="gigapascals") {
+    return 1e9
+  } else if (x=="hectopascals") {
+    return 100
+  } else if (x=="inches of mercury (0°C)") {
+    return 3386.38
+  } else if (x=="inches of mercury (16°C)") {
+    return 3376.85
+  } else if (x=="inches of mercury (conventional)") {
+    return 3386.388640341
+  } else if (x=="kilopascals") {
+    return 1000
+  } else if (x=="megapascals") {
+    return 1000000
+  } else if (x=="micropascals") {
+    return 0.000001
+  } else if (x=="millimetres of mercury") {
+    return 133.322387415
+  } else if (x=="millipascals") {
+    return 0.001
+  } else if (x=="nanopascals") {
+    return 1e-9
+  } else if (x=="pascals") {
+    return 1
+  } else if (x=="petapascals") {
+    return 1e15
+  } else if (x=="picopascals") {
+    return 1e-12
+  } else if (x=="pounds per square inch") {
+    return 6894.757
+  } else if (x=="standard atmospheres") {
+    return 101325
+  } else if (x=="terapascals") {
+    return 1e12
+  } else if (x=="torr") {
+    return 133.322368421053
+  } else if (x=="yoctopascals") {
+    return 1e-24
+  } else if (x=="yottapascals") {
+    return 1e24
+  } else if (x=="zeptopascals") {
+    return 1e-21
+  } else if (x=="zettapascals") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function pressureconverter() {
+  pressurenumberinput = document.getElementById("pressurenumberinput").value
+  pressureunitinput = getpressurecoefficient(document.getElementById("pressureunitinput").value)
+  pressureunitoutput = getpressurecoefficient(document.getElementById("pressureunitoutput").value)
+  pressurenumberoutput = pressurenumberinput*pressureunitinput/pressureunitoutput
+  if ((document.getElementById("pressureunitinput").value !== "") && (document.getElementById("pressureunitoutput").value !== "")) {
+    document.getElementById("pressurenumberoutput").innerHTML = format(pressurenumberoutput)
+  }
+}
+
+
+
+
 // Time starts here
 var timenumberinput = 1
 var timeunitinput = document.getElementById("lengthunitinput")
@@ -2623,6 +2706,7 @@ function loop() {
   magneticfluxconverter()
   massconverter()
   powerconverter()
+  pressureconverter()
   timeconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
