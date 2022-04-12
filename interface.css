@@ -2,8 +2,8 @@ body {
   background-color: #000000;
   font-family:"Courier New"
 }
-table {
-  width: 100%;
+td {
+  width: 25vw
 }
 .c1 {
   background-color: #000000;
@@ -197,7 +197,7 @@ table {
 .c22 {
   background-color: #000000;
   border: 5px outset #3300ff;
-  color: #cc00ff;
+  color: #3300ff;
   text-align: center;
   border-radius: 50px;
   height: 30vh;
