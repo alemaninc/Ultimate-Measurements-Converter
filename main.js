@@ -2551,6 +2551,75 @@ function pressureconverter() {
 
 
 
+// Radioactivity starts here
+var radioactivitynumberinput = 1
+var radioactivityunitinput = document.getElementById("radioactivityunitinput")
+var radioactivitynumberoutput = 1
+var radioactivityunitoutput = document.getElementById("radioactivityunitoutput")
+function getradioactivitycoefficient(x) {
+  if (x=="attobecquerels") {
+    return 1e-18
+  } else if (x=="becquerels") {
+    return 1
+  } else if (x=="centibecquerels") {
+    return 0.01
+  } else if (x=="curies") {
+    return 3.7e10
+  } else if (x=="decabecquerels") {
+    return 10
+  } else if (x=="decibecquerels") {
+    return 0.1
+  } else if (x=="exabecquerels") {
+    return 1e18
+  } else if (x=="femtobecquerels") {
+    return 1e-15
+  } else if (x=="gigabecquerels") {
+    return 1e9
+  } else if (x=="hectobecquerels") {
+    return 100
+  } else if (x=="kilobecquerels") {
+    return 1000
+  } else if (x=="megabecquerels") {
+    return 1000000
+  } else if (x=="microbecquerels") {
+    return 0.000001
+  } else if (x=="millibecquerels") {
+    return 0.001
+  } else if (x=="nanobecquerels") {
+    return 1e-9
+  } else if (x=="petabecquerels") {
+    return 1e15
+  } else if (x=="picobecquerels") {
+    return 1e-12
+  } else if (x=="rutherfords") {
+    return 1000000
+  } else if (x=="terabecquerels") {
+    return 1e12
+  } else if (x=="yoctobecquerels") {
+    return 1e-24
+  } else if (x=="yottabecquerels") {
+    return 1e24
+  } else if (x=="zeptobecquerels") {
+    return 1e-21
+  } else if (x=="zettabecquerels") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function radioactivityconverter() {
+  radioactivitynumberinput = document.getElementById("radioactivitynumberinput").value
+  radioactivityunitinput = getradioactivitycoefficient(document.getElementById("radioactivityunitinput").value)
+  radioactivityunitoutput = getradioactivitycoefficient(document.getElementById("radioactivityunitoutput").value)
+  radioactivitynumberoutput = radioactivitynumberinput*radioactivityunitinput/radioactivityunitoutput
+  if ((document.getElementById("radioactivityunitinput").value !== "") && (document.getElementById("radioactivityunitoutput").value !== "")) {
+    document.getElementById("radioactivitynumberoutput").innerHTML = format(radioactivitynumberoutput)
+  }
+}
+
+
+
+
 // Time starts here
 var timenumberinput = 1
 var timeunitinput = document.getElementById("lengthunitinput")
@@ -2707,6 +2776,7 @@ function loop() {
   massconverter()
   powerconverter()
   pressureconverter()
+  radioactivityconverter()
   timeconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
