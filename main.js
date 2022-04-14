@@ -2620,6 +2620,35 @@ function radioactivityconverter() {
 
 
 
+// Solid angle starts here
+var solidanglenumberinput = 1
+var solidangleunitinput = document.getElementById("solidangleunitinput")
+var solidanglenumberoutput = 1
+var solidangleunitoutput = document.getElementById("solidangleunitoutput")
+function getsolidanglecoefficient(x) {
+  if (x=="spats") {
+    return 1
+  } else if (x=="square degrees") {
+    return 2.42406840554768E-05
+  } else if (x=="steradians") {
+    return 0.0795774715459477
+  } else {
+    return NaN
+  }
+}
+function solidangleconverter() {
+  solidanglenumberinput = document.getElementById("solidanglenumberinput").value
+  solidangleunitinput = getsolidanglecoefficient(document.getElementById("solidangleunitinput").value)
+  solidangleunitoutput = getsolidanglecoefficient(document.getElementById("solidangleunitoutput").value)
+  solidanglenumberoutput = solidanglenumberinput*solidangleunitinput/solidangleunitoutput
+  if ((document.getElementById("solidangleunitinput").value !== "") && (document.getElementById("solidangleunitoutput").value !== "")) {
+    document.getElementById("solidanglenumberoutput").innerHTML = format(solidanglenumberoutput)
+  }
+}
+
+
+
+
 // Time starts here
 var timenumberinput = 1
 var timeunitinput = document.getElementById("lengthunitinput")
@@ -2777,6 +2806,7 @@ function loop() {
   powerconverter()
   pressureconverter()
   radioactivityconverter()
+  solidangleconverter()
   timeconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
