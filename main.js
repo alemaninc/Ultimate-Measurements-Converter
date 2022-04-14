@@ -2649,6 +2649,133 @@ function solidangleconverter() {
 
 
 
+// Speed starts here
+var speednumberinput = 1
+var speedunitinput = document.getElementById("speedunitinput")
+var speednumberoutput = 1
+var speedunitoutput = document.getElementById("speedunitoutput")
+function getspeedcoefficient(x) {
+  if (x=="angstroms per second") {
+    return 1e-10
+  } else if (x=="astronomical units per second") {
+    return 149597870700
+  } else if (x=="attometers per second") {
+    return 1e-18
+  } else if (x=="cana per second") {
+    return 2
+  } else if (x=="centimeters per second") {
+    return 0.01
+  } else if (x=="chains per second") {
+    return 20.1168
+  } else if (x=="Chinese chi per second") {
+    return 0.33333333333333333
+  } else if (x=="cubits per second") {
+    return 0.4572
+  } else if (x=="decameters per second") {
+    return 10
+  } else if (x=="decimeters per second") {
+    return 0.1
+  } else if (x=="Earth radii per second") {
+    return 6378100
+  } else if (x=="exameters per second") {
+    return 1e18
+  } else if (x=="fathoms per second") {
+    return 1.8288
+  } else if (x=="feet per second") {
+    return 0.3048
+  } else if (x=="femtometers per second") {
+    return 1e-15
+  } else if (x=="furlongs per second") {
+    return 201.168
+  } else if (x=="gigameters per second") {
+    return 1e9
+  } else if (x=="hectometers per second") {
+    return 100
+  } else if (x=="Hong Kong chi per second") {
+    return 0.371475
+  } else if (x=="Hubble lengths per second") {
+    return 1.3640557e26
+  } else if (x=="inches per second") {
+    return 0.0254
+  } else if (x=="kilometers per hour") {
+    return 0.27777777777778
+  } else if (x=="kilometers per second") {
+    return 1000
+  } else if (x=="knots") {
+    return 1852/3600
+  } else if (x=="leagues per second") {
+    return 5556
+  } else if (x=="li per second") {
+    return 500
+  } else if (x=="light years per second") {
+    return 9460528412464108
+  } else if (x=="links per second") {
+    return 0.201168
+  } else if (x=="lunar distances per second") {
+    return 384399000
+  } else if (x=="megameters per second") {
+    return 1000000
+  } else if (x=="meters per hour") {
+    return 0.00027777777778
+  } else if (x=="meters per second") {
+    return 1
+  } else if (x=="micrometers per second") {
+    return 0.000001
+  } else if (x=="miles per hour") {
+    return 0.44704
+  } else if (x=="miles per second") {
+    return 1609.344
+  } else if (x=="millimeters per second") {
+    return 0.001
+  } else if (x=="nanometers per second") {
+    return 1e-9
+  } else if (x=="nautical miles per second") {
+    return 1852
+  } else if (x=="observable universes per second") {
+    return 879980510813761469728000000
+  } else if (x=="parsecs per second") {
+    return 3.0856775815e16
+  } else if (x=="petameters per second") {
+    return 1e15
+  } else if (x=="picometers per second") {
+    return 1e-12
+  } else if (x=="planck lengths per second") {
+    return 1.616255e-35
+  } else if (x=="rods per second") {
+    return 5.0292
+  } else if (x=="shaku per second") {
+    return 0.30303030303030303
+  } else if (x=="speeds of light") {
+    return 299792458
+  } else if (x=="terameters per second") {
+    return 1e12
+  } else if (x=="yards per second") {
+    return 0.9144
+  } else if (x=="yoctometers per second") {
+    return 1e-24
+  } else if (x=="yottameters per second") {
+    return 1e24
+  } else if (x=="zeptometers per second") {
+    return 1e-21
+  } else if (x=="zettameters per second") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function speedconverter() {
+  speednumberinput = document.getElementById("speednumberinput").value
+  speedunitinput = getspeedcoefficient(document.getElementById("speedunitinput").value)
+  speedunitoutput = getspeedcoefficient(document.getElementById("speedunitoutput").value)
+  speednumberoutput = speednumberinput*speedunitinput/speedunitoutput
+  if ((document.getElementById("speedunitinput").value !== "") && (document.getElementById("speedunitoutput").value !== "")) {
+    document.getElementById("speednumberoutput").innerHTML = format(speednumberoutput)
+  }
+}
+
+
+
+
 // Time starts here
 var timenumberinput = 1
 var timeunitinput = document.getElementById("lengthunitinput")
