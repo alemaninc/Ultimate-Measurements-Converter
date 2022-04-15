@@ -2851,6 +2851,7 @@ var temperatureunitinput = document.getElementById("temperatureunitinput")
 var temperaturenumberoutput = 1
 var temperatureunitoutput = document.getElementById("temperatureunitoutput")
 function fromCto(x,y) {
+  y=Number(y)
   if (x=="Celsius degrees") {
     return y
   } else if (x=="Fahrenheit degrees") {
@@ -2868,6 +2869,7 @@ function fromCto(x,y) {
   }
 }
 function toCfrom(x,y) {
+  y=Number(y)
   if (x=="Celsius degrees") {
     return y
   } else if (x=="Fahrenheit degrees") {
