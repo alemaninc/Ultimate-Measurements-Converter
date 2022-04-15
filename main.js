@@ -2870,8 +2870,8 @@ function toCfrom(x,y) {
 }
 function temperatureconverter() {
   temperaturenumberinput = document.getElementById("temperaturenumberinput").value
-  temperatureunitinput = gettemperaturecoefficient(document.getElementById("temperatureunitinput").value)
-  temperatureunitoutput = gettemperaturecoefficient(document.getElementById("temperatureunitoutput").value)
+  temperatureunitinput = document.getElementById("temperatureunitinput").value
+  temperatureunitoutput = document.getElementById("temperatureunitoutput").value
   temperaturenumberoutput = fromCto(temperatureunitoutput,toCfrom(temperatureunitinput,temperaturenumberinput))
   if ((document.getElementById("temperatureunitinput").value !== "") && (document.getElementById("temperatureunitoutput").value !== "")) {
     document.getElementById("temperaturenumberoutput").innerHTML = format(temperaturenumberoutput)
