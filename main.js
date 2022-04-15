@@ -2851,22 +2851,38 @@ var temperatureunitinput = document.getElementById("temperatureunitinput")
 var temperaturenumberoutput = 1
 var temperatureunitoutput = document.getElementById("temperatureunitoutput")
 function fromCto(x,y) {
-  if (x=="Celsius degrees") return y
-  else if (x=="Fahrenheit degrees") return 32+1.8*y
-  else if (x=="Kelvin degrees") return 273.15+y
-  else if (x=="Newton degrees") return 0.33*y
-  else if (x=="Rankine degrees") return 1.8*y-459.67
-  else if (x=="Réaumur degrees") return y*0.8
-  else return NaN
+  if (x=="Celsius degrees") {
+    return y
+  } else if (x=="Fahrenheit degrees") {
+    return 32+1.8*y
+  } else if (x=="Kelvin degrees") {
+    return 273.15+y
+  } else if (x=="Newton degrees") {
+    return 0.33*y
+  } else if (x=="Rankine degrees") {
+    return 1.8*y-459.67
+  } else if (x=="Réaumur degrees") {
+    return y*0.8
+  } else {
+    return NaN
+  }
 }
 function toCfrom(x,y) {
-  if (x=="Celsius degrees") return y
-  else if (x=="Fahrenheit degrees") return (y-32)/1.8
-  else if (x=="Kelvin degrees") return y-273.15
-  else if (x=="Newton degrees") return y/0.33
-  else if (x=="Rankine degrees") return (y+459.67)/1.8
-  else if (x=="Réaumur degrees") return y*1.25
-  else return NaN
+  if (x=="Celsius degrees") {
+    return y
+  } else if (x=="Fahrenheit degrees") {
+    return (y-32)/1.8
+  } else if (x=="Kelvin degrees") {
+    return y-273.15
+  } else if (x=="Newton degrees") {
+    return y/0.33
+  } else if (x=="Rankine degrees") {
+    return (y+459.67)/1.8
+  } else if (x=="Réaumur degrees") {
+    return y*1.25
+  } else {
+    return NaN
+  }
 }
 function temperatureconverter() {
   temperaturenumberinput = document.getElementById("temperaturenumberinput").value
