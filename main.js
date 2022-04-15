@@ -2776,6 +2776,75 @@ function speedconverter() {
 
 
 
+// Substance amount starts here
+var substanceamountnumberinput = 1
+var substanceamountunitinput = document.getElementById("substanceamountunitinput")
+var substanceamountnumberoutput = 1
+var substanceamountunitoutput = document.getElementById("substanceamountunitoutput")
+function getsubstanceamountcoefficient(x) {
+  if (x=="attomoles") {
+    return 1e-18
+  } else if (x=="centimoles") {
+    return 0.01
+  } else if (x=="decamoles") {
+    return 10
+  } else if (x=="decimoles") {
+    return 0.1
+  } else if (x=="elementary entities") {
+    return 1.66053906717385e-24
+  } else if (x=="examoles") {
+    return 1e18
+  } else if (x=="femtomoles") {
+    return 1e-15
+  } else if (x=="gigamoles") {
+    return 1e9
+  } else if (x=="hectomoles") {
+    return 100
+  } else if (x=="kilomoles") {
+    return 1000
+  } else if (x=="megamoles") {
+    return 1000000
+  } else if (x=="micromoles") {
+    return 0.000001
+  } else if (x=="millimoles") {
+    return 0.001
+  } else if (x=="moles") {
+    return 1
+  } else if (x=="nanomoles") {
+    return 1e-9
+  } else if (x=="petamoles") {
+    return 1e15
+  } else if (x=="picomoles") {
+    return 1e-12
+  } else if (x=="pound-moles") {
+    return 453.59237
+  } else if (x=="teramoles") {
+    return 1e12
+  } else if (x=="yoctomoles") {
+    return 1e-24
+  } else if (x=="yottamoles") {
+    return 1e24
+  } else if (x=="zeptomoles") {
+    return 1e-21
+  } else if (x=="zettamoles") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function substanceamountconverter() {
+  substanceamountnumberinput = document.getElementById("substanceamountnumberinput").value
+  substanceamountunitinput = getsubstanceamountcoefficient(document.getElementById("substanceamountunitinput").value)
+  substanceamountunitoutput = getsubstanceamountcoefficient(document.getElementById("substanceamountunitoutput").value)
+  substanceamountnumberoutput = substanceamountnumberinput*substanceamountunitinput/substanceamountunitoutput
+  if ((document.getElementById("substanceamountunitinput").value !== "") && (document.getElementById("substanceamountunitoutput").value !== "")) {
+    document.getElementById("substanceamountnumberoutput").innerHTML = format(substanceamountnumberoutput)
+  }
+}
+
+
+
+
 // Temperature starts here
 var temperaturenumberinput = 1
 var temperatureunitinput = document.getElementById("temperatureunitinput")
