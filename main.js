@@ -3030,6 +3030,78 @@ function timeconverter() {
 
 
 
+// Torque starts here
+var torquenumberinput = 1
+var torqueunitinput = document.getElementById("torqueunitinput")
+var torquenumberoutput = 1
+var torqueunitoutput = document.getElementById("torqueunitoutput")
+function gettorquecoefficient(x) {
+  if (x=="attonewton-meters") {
+    return 1e-18
+  } else if (x=="centinewton-meters") {
+    return 0.01
+  } else if (x=="decanewton-meters") {
+    return 10
+  } else if (x=="decinewton-meters") {
+    return 0.1
+  } else if (x=="exanewton-meters") {
+    return 1e18
+  } else if (x=="femtonewton-meters") {
+    return 1e-15
+  } else if (x=="giganewton-meters") {
+    return 1e9
+  } else if (x=="hectonewton-meters") {
+    return 100
+  } else if (x=="kilonewton-meters") {
+    return 1000
+  } else if (x=="meganewton-meters") {
+    return 1000000
+  } else if (x=="micronewton-meters") {
+    return 0.000001
+  } else if (x=="millinewton-meters") {
+    return 0.001
+  } else if (x=="nanonewton-meters") {
+    return 1e-9
+  } else if (x=="newton-meters") {
+    return 1
+  } else if (x=="ounce-feet") {
+    return 0.084738621770625
+  } else if (x=="ounce-inches") {
+    return 0.00706155181421875
+  } else if (x=="petanewton-meters") {
+    return 1e15
+  } else if (x=="piconewton-meters") {
+    return 1e-12
+  } else if (x=="pound-feet") {
+    return 1.35581794833
+  } else if (x=="pound-inches") {
+    return 0.1129848290275
+  } else if (x=="teranewton-meters") {
+    return 1e12
+  } else if (x=="yoctonewton-meters") {
+    return 1e-24
+  } else if (x=="yottanewton-meters") {
+    return 1e24
+  } else if (x=="zeptonewton-meters") {
+    return 1e-21
+  } else if (x=="zettanewton-meters") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function torqueconverter() {
+  torquenumberinput = document.getElementById("torquenumberinput").value
+  torqueunitinput = gettorquecoefficient(document.getElementById("torqueunitinput").value)
+  torqueunitoutput = gettorquecoefficient(document.getElementById("torqueunitoutput").value)
+  torquenumberoutput = torquenumberinput*torqueunitinput/torqueunitoutput
+  if ((document.getElementById("torqueunitinput").value !== "") && (document.getElementById("torqueunitoutput").value !== "")) {
+    document.getElementById("torquenumberoutput").innerHTML = format(torquenumberoutput)
+  }
+}
+
+
+
 
 function loop() {
   absorbeddoseconverter()
@@ -3061,5 +3133,6 @@ function loop() {
   substanceamountconverter()
   temperatureconverter()
   timeconverter()
+  torqueconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
