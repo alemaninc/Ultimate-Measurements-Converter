@@ -3174,6 +3174,143 @@ function voltageconverter() {
 
 
 
+// Volume starts here
+var volumenumberinput = 1
+var volumeunitinput = document.getElementById("volumeunitinput")
+var volumenumberoutput = 1
+var volumeunitoutput = document.getElementById("volumeunitoutput")
+function getvolumecoefficient(x) {
+  if (x=="angstroms³") {
+    return 1e-30
+  } else if (x=="astronomical units³") {
+    return 3.34792897581075e30
+  } else if (x=="attometers³") {
+    return 1e-54
+  } else if (x=="cana³") {
+    return 8
+  } else if (x=="centimeters³") {
+    return 0.000001
+  } else if (x=="chains³") {
+    return 8140.98012781363
+  } else if (x=="Chinese chi³") {
+    return 0.037037037037037
+  } else if (x=="cubits³") {
+    return 0.095569357248
+  } else if (x=="decameters³") {
+    return 1000
+  } else if (x=="decimeters³") {
+    return 0.001
+  } else if (x=="Earth volumes") {
+    return 1.083206916846e21
+  } else if (x=="exameters³") {
+    return 1e54
+  } else if (x=="fathoms³") {
+    return 6.116438863872
+  } else if (x=="feet³") {
+    return 0.028316846592
+  } else if (x=="femtometers³") {
+    return 1e-45
+  } else if (x=="furlongs³") {
+    return 8.14098012781363e6
+  } else if (x=="gigameters³") {
+    return 1e27
+  } else if (x=="hectometers³") {
+    return 1000000
+  } else if (x=="Hong Kong chi³") {
+    return 0.0512612006527969
+  } else if (x=="Hubble volumes") {
+    return 1.06313e79
+  } else if (x=="inches³") {
+    return 0.000016387064
+  } else if (x=="Jovian volumes") {
+    return 1.4313e24
+  } else if (x=="kilometers³") {
+    return 1e9
+  } else if (x=="leagues³") {
+    return 1.71508919616e11
+  } else if (x=="li³") {
+    return 1.25e8
+  } else if (x=="light years³") {
+    return 8.4673240935502e47
+  } else if (x=="links³") {
+    return 0.00814098012781363
+  } else if (x=="lunar distances³") {
+    return 5.67997922950732e25
+  } else if (x=="lunar volumes") {
+    return 2.1958e19
+  } else if (x=="Martian volumes") {
+    return 1.63118e20
+  } else if (x=="megameters³") {
+    return 1e18
+  } else if (x=="Mercurian volumes") {
+    return 6.083e19
+  } else if (x=="meters³") {
+    return 1
+  } else if (x=="micrometers³") {
+    return 1e-18
+  } else if (x=="miles³") {
+    return 4.16818182544058e9
+  } else if (x=="millimeters³") {
+    return 1e-9
+  } else if (x=="nanometers³") {
+    return 1e-27
+  } else if (x=="nautical miles³") {
+    return 6.352182208e9
+  } else if (x=="Neptunian volumes") {
+    return 6.253e22
+  } else if (x=="observable universes") {
+    return 3.56794e80
+  } else if (x=="parsecs³") {
+    return 2.93799894612101e49
+  } else if (x=="petameters³") {
+    return 1e45
+  } else if (x=="picometers³") {
+    return 1e-36
+  } else if (x=="planck volumes") {
+    return 4.22211097509778e-105
+  } else if (x=="Plutonian volumes") {
+    return 7.057e18
+  } else if (x=="rods³") {
+    return 127.202814497088
+  } else if (x=="Saturnian volumes") {
+    return 8.2713e23
+  } else if (x=="shaku³") {
+    return 0.0278264741074658
+  } else if (x=="solar volumes") {
+    return 1.41e27
+  } else if (x=="terameters³") {
+    return 1e36
+  } else if (x=="Uranian volumes") {
+    return 6.833e22
+  } else if (x=="Venusian (cytherean) volumes") {
+    return 9.2843e20
+  } else if (x=="yards³") {
+    return 0.764554857984
+  } else if (x=="yoctometers³") {
+    return 1e-72
+  } else if (x=="yottameters³") {
+    return 1e72
+  } else if (x=="zeptometers³") {
+    return 1e-63
+  } else if (x=="zettameters³") {
+    return 1e63
+  } else {
+    return NaN
+  }
+}
+function volumeconverter() {
+  volumenumberinput = document.getElementById("volumenumberinput").value
+  volumeunitinput = getvolumecoefficient(document.getElementById("volumeunitinput").value)
+  volumeunitoutput = getvolumecoefficient(document.getElementById("volumeunitoutput").value)
+  volumenumberoutput = volumenumberinput*volumeunitinput/volumeunitoutput
+  if ((document.getElementById("volumeunitinput").value !== "") && (document.getElementById("volumeunitoutput").value !== "")) {
+    document.getElementById("volumenumberoutput").innerHTML = format(volumenumberoutput)
+  }
+}
+
+
+
+
 function loop() {
   absorbeddoseconverter()
   accelerationconverter()
@@ -3206,5 +3343,6 @@ function loop() {
   timeconverter()
   torqueconverter()
   voltageconverter()
+  volumeconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
