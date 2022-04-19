@@ -3103,6 +3103,77 @@ function torqueconverter() {
 
 
 
+// Voltage starts here
+var voltagenumberinput = 1
+var voltageunitinput = document.getElementById("voltageunitinput")
+var voltagenumberoutput = 1
+var voltageunitoutput = document.getElementById("voltageunitoutput")
+function getvoltagecoefficient(x) {
+  if (x=="ampere-ohms") {
+    return 1
+  } else if (x=="attovolts") {
+    return 1e-18
+  } else if (x=="centivolts") {
+    return 0.01
+  } else if (x=="decavolts") {
+    return 10
+  } else if (x=="decivolts") {
+    return 0.1
+  } else if (x=="exavolts") {
+    return 1e18
+  } else if (x=="femtovolts") {
+    return 1e-15
+  } else if (x=="gigavolts") {
+    return 1e9
+  } else if (x=="hectovolts") {
+    return 100
+  } else if (x=="joules per coulomb") {
+    return 1
+  } else if (x=="kilovolts") {
+    return 1000
+  } else if (x=="megavolts") {
+    return 1000000
+  } else if (x=="microvolts") {
+    return 0.000001
+  } else if (x=="millivolts") {
+    return 0.001
+  } else if (x=="nanovolts") {
+    return 1e-9
+  } else if (x=="petavolts") {
+    return 1e15
+  } else if (x=="picovolts") {
+    return 1e-12
+  } else if (x=="teravolts") {
+    return 1e12
+  } else if (x=="volts") {
+    return 1
+  } else if (x=="webers per second") {
+    return 1
+  } else if (x=="yoctovolts") {
+    return 1e-24
+  } else if (x=="yottavolts") {
+    return 1e24
+  } else if (x=="zeptovolts") {
+    return 1e-21
+  } else if (x=="zettavolts") {
+    return 1e21
+  } else {
+    return NaN
+  }
+}
+function voltageconverter() {
+  voltagenumberinput = document.getElementById("voltagenumberinput").value
+  voltageunitinput = getvoltagecoefficient(document.getElementById("voltageunitinput").value)
+  voltageunitoutput = getvoltagecoefficient(document.getElementById("voltageunitoutput").value)
+  voltagenumberoutput = voltagenumberinput*voltageunitinput/voltageunitoutput
+  if ((document.getElementById("voltageunitinput").value !== "") && (document.getElementById("voltageunitoutput").value !== "")) {
+    document.getElementById("voltagenumberoutput").innerHTML = format(voltagenumberoutput)
+  }
+}
+
+
+
+
 function loop() {
   absorbeddoseconverter()
   accelerationconverter()
@@ -3134,5 +3205,6 @@ function loop() {
   temperatureconverter()
   timeconverter()
   torqueconverter()
+  voltageconverter()
 }
 setInterval(loop,100); // Makes the page update automatically
